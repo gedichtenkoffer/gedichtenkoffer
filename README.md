@@ -1,16 +1,24 @@
-### Hi there 👋
 
-<!--
-**gedichtenkoffer/gedichtenkoffer** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# Over mij
 
-Here are some ideas to get you started:
+'Kleine Jan die zag een doosje\
+thuis bij moeder op de kast\
+en hij greep toen na een poosje\
+vlug dat mooie doosje vast'
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Dit citaat komt uit een heel oud boekje\
+het ligt nu in een oude doos ergens in een hoekje\
+Mijn moeder en ik kennen het uit ons hoofd\
+de liefde voor taal en rijm is nooit uitgedoofd
+
+Tegen de verjaardag van de Sint dachten we alweer in rijm\
+voor menigeen was het een draak maar wij vonden het fijn\
+Helaas kan ik het niet meer met haar delen\
+maar ik deel het nu op het wereld wijde web met velen
+
+![logo](logo.png)
+
+De banner symboliseert het leven\
+over alles wat we daar in beleven\
+Geboorte, het schrijven, de liefde, de rouw\
+snuffel lekker door de teksten dan zie je het gauw
