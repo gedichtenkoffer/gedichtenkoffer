@@ -1,3 +1,7 @@
+---
+title: Baby
+---
+
 ## Baby
 
 Als baby moet je alles nog leren
