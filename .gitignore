@@ -1,0 +1,20 @@
+*.json
+.~lock.*#
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+*.tmp
+~$*.doc*
+Backup of *.doc*
+~$*.xls*
+*.xlk
+~$*.ppt*
+*.~vsd*
+.vscode/*
+.history/
+*.vsix
+.history
+.ionide
+*.pdf
