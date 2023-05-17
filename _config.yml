@@ -1,0 +1,23 @@
+theme: minimal-mistakes-jekyll
+
+minimal_mistakes_skin: "default" # standaard skin
+
+# Navigatie instellingen
+header_pages:
+  - README.md
+
+# Navigatiebalk instellingen
+sidebar:
+  nav:
+    - title: "Baby"
+      children:
+        - title: "Baby"
+          url: /Baby/Baby.md
+        - title: "Eerste keren"
+          url: /Baby/Eerste_keren.md
+        - title: "Vijf kleine vingertjes"
+          url: /Baby/Vijf_kleine_vingertjes.md
+    - title: "Dieren"
+      children:
+        - title: "Hondje"
+          url: /Dieren/Hondje.md
