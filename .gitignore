@@ -5,6 +5,7 @@
 *.vsix
 *.xlk
 *.~vsd*
+*cache*
 *~
 .Trash-*
 .directory

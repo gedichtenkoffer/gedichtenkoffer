@@ -1,3 +1,7 @@
+---
+map: Beestenboel
+---
+
 ##  Hondje
 
 Hondje met bal in zijn mond

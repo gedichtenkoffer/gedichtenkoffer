@@ -1,5 +1,5 @@
 ---
-title: Baby
+map: Baby
 ---
 
 ## Baby

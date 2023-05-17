@@ -1,0 +1,12 @@
+---
+map: Kerst
+---
+
+## Licht in duisternis
+
+Kerst is licht in de duisternis \
+liefde in het hart \
+ook al is er het gemis \
+we delen onze smart
+
+![Image](IMG_20201214_102241__01.jpg)
