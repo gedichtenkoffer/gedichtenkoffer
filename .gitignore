@@ -17,7 +17,6 @@
 .vscode/*
 .~lock.*#
 Backup of *.doc*
-_plugins/
 _site/
 ~$*.doc*
 ~$*.ppt*
