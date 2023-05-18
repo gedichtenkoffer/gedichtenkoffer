@@ -1,6 +1,6 @@
 window.addEventListener('resize', function () {
-    var menu = document.getElementById('menu');
-    var btn = document.getElementById('toggle');
+    const menu = document.getElementById('menu');
+    const btn = document.getElementById('toggle');
     if (window.innerWidth >= 800) {
         menu.style.display = 'block';
         btn.style.display = 'none';
@@ -11,10 +11,8 @@ window.addEventListener('resize', function () {
 });
 
 document.getElementById('toggle').addEventListener('click', function () {
-    var menu = document.getElementById('menu');
-    if (menu.style.display === 'block') {
-        menu.style.display = 'none';
-    } else {
-        menu.style.display = 'block';
-    }
+    const btn = document.getElementById('toggle');
+    const menu = document.getElementById('menu');
+    menu.style.display = 'block';
+    btn.style.display = 'none';
 });
