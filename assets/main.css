@@ -6,6 +6,7 @@
 :root {
     --bg-color: #EDEDED;
     --text-color: #1A1A1A;
+    --text-dark-color: #D3D7CF;
     --primary-color: #4A90D9;
     --secondary-color: #FFFFFF;
     --border-color: #CCCCCC;
@@ -15,7 +16,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --bg-color: #2E3436;
-        --text-color: #D3D7CF;
+        --text-color: var(--text-dark-color);
         --primary-color: #3465A4;
         --secondary-color: #555753;
         --border-color: #888A85;
@@ -137,6 +138,7 @@ summary:hover,
 summary:focus,
 details[open] summary {
     background-color: var(--primary-color);
+    color: var(--text-dark-color);
 }
 
 .primary,
