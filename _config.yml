@@ -1,5 +1,4 @@
 plugins:
-  - jekyll-kw-sri
   - jekyll-sitemap
   - jekyll-coffeescript
   - jekyll-default-layout
