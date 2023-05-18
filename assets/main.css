@@ -27,7 +27,6 @@
 }
 
 section {
-    max-width: fit-content;
     margin: 0 auto;
     padding: 0 1em;
 }
@@ -40,17 +39,47 @@ article {
     overflow: hidden;
 }
 
-article,
-nav {
-    width: 100%;
-    height: auto;
+@media screen and (min-width: 800px) {
+
+    section,
+    article,
+    nav {
+        width: 100%;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav,
+    nav a,
+    nav details,
+    nav ui {
+        width: 100%;
+    }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 800px) {
 
     article,
     nav {
         float: left;
+    }
+
+    nav,
+    nav a,
+    nav details,
+    nav ui {
+        width: 15em;
+    }
+
+    section {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        max-width: fit-content;
     }
 
     section::after {
@@ -152,13 +181,6 @@ a:focus {
 
 img {
     max-width: 100%;
-}
-
-nav,
-nav a,
-nav details,
-nav ui {
-    width: 15em;
 }
 
 nav a,
