@@ -1,15 +1,227 @@
-body {
-    background-color: white;
-    color: black;
+* {
+    font-family: 'Cantarell', 'Arial', 'Helvetica', sans-serif;
+    line-height: 1.5;
+}
+
+:root {
+    --bg-color: #EDEDED;
+    --text-color: #1A1A1A;
+    --primary-color: #4A90D9;
+    --secondary-color: #FFFFFF;
+    --border-color: #CCCCCC;
+    --link-color: #204a87;
 }
 
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: black;
-        color: white;
+    :root {
+        --bg-color: #2E3436;
+        --text-color: #D3D7CF;
+        --primary-color: #3465A4;
+        --secondary-color: #555753;
+        --border-color: #888A85;
+        --link-color: #729fcf;
+
+        background-color: var(--bg-color);
+        color: var(--text-color);
     }
+}
+
+section {
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+footer,
+article {
+    text-align: center;
+    max-width: 50em;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+article,
+nav {
+    float: left;
+}
+
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 600px) {
+
+    article,
+    nav {
+        width: 100%;
+        height: auto;
+    }
+}
+
+article {
+    border: 1px solid var(--border-color);
+}
+
+body,
+article,
+button,
+img,
+nav ul,
+nav ul li,
+summary {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+article,
+nav ul,
+details div {
+    border: 1px solid var(--border-color);
+    background-color: var(--secondary-color);
+}
+
+button .primary,
+.nav ul li:hover,
+.nav ul li:focus,
+summary:hover,
+summary:focus,
+details[open] summary {
+    background-color: var(--primary-color);
+}
+
+button .primary,
+.nav ul li:hover,
+.nav ul li:focus {
+    color: var(--secondary-color);
+}
+
+button .primary:hover,
+button .secondary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+button .secondary:hover,
+nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+button,
+nav ul li {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button .secondary,
+nav ul li a,
+details,
+summary {
+    color: var(--text-color);
+}
+
+a,
+img {
+    transition: color 0.3s ease-in-out;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: var(--primary-color);
+}
+
+a:focus {
+    outline: 2px solid var(--primary-color);
 }
 
 img {
     max-width: 100%;
+}
+
+nav,
+nav details,
+nav ui {
+    width: 15em;
+}
+
+nav ul {
+    box-sizing: border-box;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav ul li:last-child {
+    border-bottom: none;
+}
+
+nav ul li:hover,
+nav ul li:focus {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+nav ul li a,
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a:active {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+details {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+details[open] {
+    background-color: var(--secondary-color);
+}
+
+summary {
+    border: none;
+    cursor: pointer;
+    list-style: none;
+    outline: none;
+    padding: 10px;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary:before {
+    content: '▶';
+    display: inline-block;
+    width: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+details[open] summary:before {
+    transform: rotate(90deg);
+}
+
+article,
+button,
+nav ul li,
+summary,
+details {
+    border-radius: 5px;
 }
