@@ -35,21 +35,21 @@
         <nav>
           <a href="{{ '/' | relative_url }}" aria-label="Over mij">Over mij</a>
 
-          {% assign sorted_pages = site.pages | sort: 'map' %}
-          {% assign filtered_pages = sorted_pages | where_exp: "page", "page.map != null" %}
-          {% assign unique_map_names = filtered_pages | map: 'map' | uniq %}
-          {% for map_name in unique_map_names %}
+          {%- assign sorted_pages = site.pages | sort: 'map' -%}
+          {%- assign filtered_pages = sorted_pages | where_exp: "page", "page.map != null" -%}
+          {%- assign unique_map_names = filtered_pages | map: 'map' | uniq -%}
+          {%- for map_name in unique_map_names -%}
           <details>
             <summary>{{ map_name }}</summary>
             <ul>
-              {% for page in filtered_pages %}
-              {% if page.map == map_name %}
+              {%- for page in filtered_pages -%}
+              {%- if page.map == map_name -%}
               <li><a href="{{ page.url | relative_url }}" aria-label="{{ page.title }}">{{ page.title }}</a></li>
-              {% endif %}
-              {% endfor %}
+              {%- endif -%}
+              {%- endfor -%}
             </ul>
           </details>
-          {% endfor %}
+          {%- endfor -%}
         </nav>
       </details>
     </noscript>
@@ -64,21 +64,21 @@
     <nav id="menu" class="noscript">
       <a href="{{ '/' | relative_url }}">Over mij</a>
 
-      {% assign sorted_pages = site.pages | sort: 'map' %}
-      {% assign filtered_pages = sorted_pages | where_exp: "page", "page.map != null" %}
-      {% assign unique_map_names = filtered_pages | map: 'map' | uniq %}
-      {% for map_name in unique_map_names %}
+      {%- assign sorted_pages = site.pages | sort: 'map' -%}
+      {%- assign filtered_pages = sorted_pages | where_exp: "page", "page.map != null" -%}
+      {%- assign unique_map_names = filtered_pages | map: 'map' | uniq -%}
+      {%- for map_name in unique_map_names -%}
       <details>
         <summary>{{ map_name }}</summary>
         <ul>
-          {% for page in filtered_pages %}
-          {% if page.map == map_name %}
+          {%- for page in filtered_pages -%}
+          {%- if page.map == map_name -%}
           <li><a href="{{ page.url | relative_url }}" aria-label="{{ page.title }}">{{ page.title }}</a></li>
-          {% endif %}
-          {% endfor %}
+          {%- endif -%}
+          {%- endfor -%}
         </ul>
       </details>
-      {% endfor %}
+      {%- endfor -%}
     </nav>
 
     <article>
@@ -87,9 +87,9 @@
   </section>
 
   <footer>
-    {% capture footer_content %}
-    {% include footer.md %}
-    {% endcapture %}
+    {%- capture footer_content -%}
+    {%- include footer.md -%}
+    {%- endcapture -%}
     {{ footer_content | markdownify }}
   </footer>
 </body>
