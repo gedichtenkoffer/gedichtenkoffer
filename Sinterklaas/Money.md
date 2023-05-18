@@ -3,7 +3,6 @@ map: Sinterklaas
 ---
 
 ## Money
-License: cc
 
 Het rinkelt en het blinkt \
 soms zegt men dat het stinkt \
@@ -13,8 +12,7 @@ het glipt door de vingers als was het zand
 Je hebt er nooit genoeg van \
 maar wisselt het steeds weer in \
 het is zoveel wat je er mee kan \
-soms drijft het iemand tot waanzin \
-
+soms drijft het iemand tot waanzin
 
 Men zegt dat het moet rollen \
 maar dan wel graag de goede kant op  \
