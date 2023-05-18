@@ -113,9 +113,8 @@ nav ul li a:hover {
     color: var(--secondary-color);
 }
 
-button,
-nav ul li {
-    padding: 10px 20px;
+a,
+button {
     cursor: pointer;
 }
 
@@ -182,6 +181,8 @@ nav ul li a:focus,
 nav ul li a:active {
     color: var(--text-color);
     text-decoration: none;
+    display: block;
+    padding: 1em;
 }
 
 details {
