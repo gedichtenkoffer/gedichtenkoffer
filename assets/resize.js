@@ -4,7 +4,7 @@ window.addEventListener('resize', function () {
     if (window.innerWidth >= 800) {
         menu.style.display = 'block';
         btn.style.display = 'none';
-    } else {
+    } else if (window.innerWidth < 800 && menu.style.display !== 'block') {
         menu.style.display = 'none';
         btn.style.display = 'block';
     }
