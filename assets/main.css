@@ -135,8 +135,7 @@ nav a:focus,
 nav ul li:hover,
 nav ul li:focus,
 summary:hover,
-summary:focus,
-details[open] summary {
+summary:focus {
     background-color: var(--primary-color);
 }
 
