@@ -42,21 +42,21 @@ article {
 
 article,
 nav {
-    float: left;
+    width: 100%;
+    height: auto;
 }
 
-section::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-@media (max-width: 600px) {
+@media screen and (min-width: 1200px) {
 
     article,
     nav {
-        width: 100%;
-        height: auto;
+        float: left;
+    }
+
+    section::after {
+        content: "";
+        display: table;
+        clear: both;
     }
 }
 
