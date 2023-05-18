@@ -24,4 +24,4 @@ t' is toch net als bij de mens \
 de kat is thuis op z'n allerbest  \
 maar verkent buiten steeds zijn grens
 
-![Image](IMG_20191121_223424__01__01.jpg)
+![poes](poes.png)
