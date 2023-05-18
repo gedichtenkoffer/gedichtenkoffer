@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
   <meta charset="utf-8" />
   <meta http-equiv="Cache-Control" content="public, max-age=63072000, immutable" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self';">
   <meta http-equiv="Expires" content="63072000" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -54,45 +54,12 @@
       </details>
     </noscript>
 
-    <script type="text/javascript" async>
-      document.addEventListener('DOMContentLoaded', function () {
-        var noscriptElements = document.querySelectorAll('.noscript');
-        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-        for (var i = 0; i < noscriptElements.length; i++) {
-          if (noscriptElements[i].id !== 'toggle' && (screenWidth >= 800 || noscriptElements[i].id !== 'menu')) {
-            noscriptElements[i].style.display = 'block';
-          }
-        }
-      });
-    </script>
-
-    <script type="text/javascript" async>
-      window.addEventListener('resize', function () {
-        var menu = document.getElementById('menu');
-        var btn = document.getElementById('toggle');
-        if (window.innerWidth >= 800) {
-          menu.style.display = 'block';
-          btn.style.display = 'none';
-        } else {
-          menu.style.display = 'none';
-          btn.style.display = 'block';
-        }
-      });
-
-      function toggleMenu() {
-        var menu = document.getElementById('menu');
-        if (menu.style.display === 'block') {
-          menu.style.display = 'none';
-        } else {
-          menu.style.display = 'block';
-        }
-      }
-    </script>
-
     <header>
-      <button id="toggle" class="secondary noscript" onclick="toggleMenu()">☰ Menu</button>
+      <button id="toggle" class="secondary noscript">☰ Menu</button>
     </header>
+
+    <script type="text/javascript" src="{{ '/assets/resize.js' | relative_url }}"></script>
+    <script type="text/javascript" src="{{ '/assets/noscript.js' | relative_url }}"></script>
 
     <nav id="menu" class="noscript">
       <a href="{{ '/' | relative_url }}">Over mij</a>
