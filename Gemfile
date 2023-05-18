@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem "jekyll"
+gem 'jekyll-kw-sri'
 gem "jekyll-sitemap"
 gem "jekyll-coffeescript"
 gem "jekyll-default-layout"
