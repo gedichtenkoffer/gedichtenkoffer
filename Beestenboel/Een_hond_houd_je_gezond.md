@@ -19,4 +19,4 @@ Het ontspant lichaam en geest \
 wie geniet er nu het meest? \
 Ik weet het even nie
 
-![Image](IMG_20191121_223413__01__01.jpg)
+![hond](hond.jpg)

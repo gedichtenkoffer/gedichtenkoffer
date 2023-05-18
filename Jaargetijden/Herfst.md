@@ -12,4 +12,4 @@ het regent blaadjes, dwarrelend in een lange lint
 Het is oktober en zoals verwacht  \
 is de herfst begonnen met al haar kleurenpracht
 
-![Image](IMG_20191027_152136.jpg)
+![Herfst](Herfst.jpg)

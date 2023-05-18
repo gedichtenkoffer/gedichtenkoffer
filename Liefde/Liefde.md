@@ -14,4 +14,4 @@ liefde is eenvoudig en toch groot  \
 liefde zit verankerd in het hart \
 liefde is sterker dan de dood
 
-![Image](IMG_20200505_185132__01.jpg)
+![Liefde](Liefde.jpg)

@@ -20,4 +20,4 @@ Helaas geen fysieke knuffel van mij \
 het kan niet, het mag niet \
 maar in hart en hoofd ben ik erbij
 
-![Image](IMG_20201217_151437__01.jpg)
+![Afscheid](Afscheid.jpg)

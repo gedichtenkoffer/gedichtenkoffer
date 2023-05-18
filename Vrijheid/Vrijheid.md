@@ -17,4 +17,4 @@ met oog voor ieders talent en waardering
 Leven in vrijheid als wereldwijde werkelijkheid \
 het is ons aller verantwoordelijkheid
 
-![Image](IMG_20200531_212718__01__02.jpg)
+![Vrijheid](Vrijheid.jpg)
