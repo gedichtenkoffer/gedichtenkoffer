@@ -2,7 +2,7 @@
 <html lang="nl">
 
 <head>
-  <title>{{ page.title }}</title>
+  <title>{%- if page.title -%}{{ page.title }}{%- else -%}Gedichtenkoffer{%- endif -%}</title>
   <link rel="apple-touch-icon" async="true" href="{{ '/assets/icons/apple-touch-icon-152x152.png' | relative_url }}" integrity="{{ '/assets/icons/apple-touch-icon-152x152.png' | sri_tag }}" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" integrity="{{ '/favicon.ico' | sri_tag }}">
   <link rel="mask-icon" async="true" href="{{ '/assets/icons/safari-pinned-tab.svg' | relative_url }}" integrity="{{ '/assets/icons/safari-pinned-tab.svg' | sri_tag }}"
