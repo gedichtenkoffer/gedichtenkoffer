@@ -14,7 +14,7 @@ voor menigeen was het een draak maar wij vonden het fijn\
 Helaas kan ik het niet meer met haar delen\
 maar ik deel het nu op het wereld wijde web met velen
 
-![logo](logo.png)
+![logo](logo-1280×510.png)
 
 De banner symboliseert het leven\
 over alles wat we daar in beleven\
