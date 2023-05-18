@@ -24,11 +24,11 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build with Jekyll
-        uses: helaili/jekyll-action@2.0.5
+        uses:  helaili/jekyll-action@v2
         with:
-          target_branch: 'gh-pages'
           token: ${{ secrets.GITHUB_TOKEN }}
           jekyll_src: './'
+          target_branch: 'gh-pages'
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
