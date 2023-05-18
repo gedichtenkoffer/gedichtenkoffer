@@ -81,6 +81,10 @@ article {
         width: 15em;
     }
 
+    #menu {
+        padding-right: 1em;
+    }
+
     section {
         display: -webkit-box;
         display: -moz-box;
