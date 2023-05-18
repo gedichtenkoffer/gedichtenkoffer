@@ -68,6 +68,7 @@ body,
 article,
 button,
 img,
+nav a,
 nav ul,
 nav ul li,
 summary {
@@ -87,8 +88,10 @@ details div {
 }
 
 button .primary,
-.nav ul li:hover,
-.nav ul li:focus,
+nav a:hover,
+nav a:focus,
+nav ul li:hover,
+nav ul li:focus,
 summary:hover,
 summary:focus,
 details[open] summary {
@@ -96,8 +99,9 @@ details[open] summary {
 }
 
 button .primary,
-.nav ul li:hover,
-.nav ul li:focus {
+nav a:hover,
+nav a:focus nav ul li:hover,
+nav ul li:focus {
     color: var(--secondary-color);
 }
 
@@ -108,6 +112,7 @@ button .secondary {
 }
 
 button .secondary:hover,
+nav a:hover,
 nav ul li a:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -119,6 +124,7 @@ button {
 }
 
 button .secondary,
+nav a,
 nav ul li a,
 details,
 summary {
@@ -149,32 +155,50 @@ img {
 }
 
 nav,
+nav a,
 nav details,
 nav ui {
     width: 15em;
 }
 
+nav a,
 nav ul {
     box-sizing: border-box;
     list-style-type: none;
-    padding: 0;
     margin: 0;
 }
 
+nav ul {
+    padding: 0;
+}
+
+summary,
+nav a {
+    padding: 0.5em;
+    display: block;
+}
+
+nav a,
 nav ul li {
     border-bottom: 1px solid var(--border-color);
 }
 
+nav a,
 nav ul li:last-child {
     border-bottom: none;
 }
 
+nav a:hover,
+nav a:focus,
 nav ul li:hover,
 nav ul li:focus {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
 
+nav a:hover,
+nav a:focus,
+nav a:active,
 nav ul li a,
 nav ul li a:hover,
 nav ul li a:focus,
@@ -182,7 +206,6 @@ nav ul li a:active {
     color: var(--text-color);
     text-decoration: none;
     display: block;
-    padding: 1em;
 }
 
 details {
@@ -201,18 +224,10 @@ summary {
     cursor: pointer;
     list-style: none;
     outline: none;
-    padding: 10px;
 }
 
 summary::-webkit-details-marker {
     display: none;
-}
-
-summary:before {
-    content: '▶';
-    display: inline-block;
-    width: 20px;
-    transition: transform 0.3s ease-in-out;
 }
 
 details[open] summary:before {
@@ -221,6 +236,7 @@ details[open] summary:before {
 
 article,
 button,
+nav a,
 nav ul li,
 summary,
 details {

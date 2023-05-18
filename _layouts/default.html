@@ -10,6 +10,7 @@
 <body>
   <section>
     <nav>
+      <a href="{{ '/' | relative_url }}">Over mij</a>
       {% assign sorted_pages = site.pages | sort: 'map' %}
       {% assign filtered_pages = sorted_pages | where_exp: "page", "page.map != null" %}
       {% assign unique_map_names = filtered_pages | map: 'map' | uniq %}
