@@ -8,8 +8,10 @@ module Jekyll
       if File.exists?(file_path)
         content = File.read(file_path)
         digest = Digest::SHA384.base64digest(content)
+        # Jekyll.logger.info "SRI: Hashed #{file_path}"
         "sha384-#{digest}"
       else
+        Jekyll.logger.warn "SRI: File not found #{file_path}"
         nil
       end
     end
