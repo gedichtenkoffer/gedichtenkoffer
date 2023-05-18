@@ -17,3 +17,18 @@ module Jekyll
 end
 
 Liquid::Template.register_filter(Jekyll::SRITagFilter)
+
+Jekyll::Hooks.register :site, :post_write do |site|
+  site.pages.each do |page|
+    page.output = page.output.gsub(/integrity="(.*?)"/) do |match|
+      path = $1
+      if File.exists?(File.join(site.dest, path))
+        file_contents = File.read(File.join(site.dest, path))
+        digest = Digest::SHA384.base64digest(file_contents)
+        'integrity="sha384-' + digest + '"'
+      else
+        match
+      end
+    end
+  end
+end
