@@ -39,23 +39,30 @@ article {
     overflow: hidden;
 }
 
-@media screen and (min-width: 800px) {
+.noscript,
+#toggle {
+    display: none;
+}
 
-    section,
-    article,
-    nav {
-        width: 100%;
-    }
-
-    nav {
-        display: block;
-    }
+@media screen and (max-width: 800px) {
 
     nav,
     nav a,
     nav details,
     nav ui {
         width: 100%;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #toggle {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
     }
 }
 
@@ -116,7 +123,7 @@ details div {
     background-color: var(--secondary-color);
 }
 
-button .primary,
+.primary,
 nav a:hover,
 nav a:focus,
 nav ul li:hover,
@@ -127,24 +134,22 @@ details[open] summary {
     background-color: var(--primary-color);
 }
 
-button .primary,
+.primary,
 nav a:hover,
 nav a:focus nav ul li:hover,
 nav ul li:focus {
     color: var(--secondary-color);
 }
 
-button .primary:hover,
-button .secondary {
+.primary:hover,
+.secondary {
     background-color: var(--secondary-color);
-    color: var(--primary-color);
 }
 
-button .secondary:hover,
+.secondary:hover,
 nav a:hover,
 nav ul li a:hover {
     background-color: var(--primary-color);
-    color: var(--secondary-color);
 }
 
 a,
@@ -152,7 +157,7 @@ button {
     cursor: pointer;
 }
 
-button .secondary,
+.secondary,
 nav a,
 nav ul li a,
 details,
@@ -194,6 +199,12 @@ nav ul {
     padding: 0;
 }
 
+nav,
+button {
+    margin: 1em auto;
+}
+
+button,
 summary,
 nav a {
     padding: 0.5em;
@@ -218,6 +229,12 @@ nav ul li:focus {
     color: var(--secondary-color);
 }
 
+.primary:hover,
+.primary:active,
+.primary:focus,
+.secondary:hover,
+.secondary:active,
+.secondary:focus,
 nav a:hover,
 nav a:focus,
 nav a:active,
@@ -241,6 +258,7 @@ details[open] {
     background-color: var(--secondary-color);
 }
 
+button,
 summary {
     border: none;
     cursor: pointer;
