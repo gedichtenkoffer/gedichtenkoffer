@@ -138,7 +138,6 @@ summary:hover,
 summary:focus,
 details[open] summary {
     background-color: var(--primary-color);
-    color: var(--text-dark-color);
 }
 
 .primary,
