@@ -4,7 +4,7 @@ require 'base64'
 module Jekyll
   module SRITagFilter
     def sri_tag(input)
-      file_path = File.join(@context.registers[:site].source, input)
+      file_path = File.join(@context.registers[:site].dest, input)
       if File.exists?(file_path)
         content = File.read(file_path)
         digest = Digest::SHA384.base64digest(content)
