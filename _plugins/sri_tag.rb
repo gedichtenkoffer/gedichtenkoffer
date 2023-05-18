@@ -34,3 +34,16 @@ Jekyll::Hooks.register :site, :post_write do |site|
     end
   end
 end
+
+Jekyll::Hooks.register [:pages, :posts, :documents], :pre_render do |doc|
+  doc.content = doc.content.gsub(/\{\{\s*(\/.*?\.(css|js|png|svg|ico))\s*\|\s*sri_tag\s*\}\}/) do |match|
+    filepath = doc.site.in_source_dir($1.strip)
+    if File.exists?(filepath)
+      content = File.read(filepath)
+      digest = Digest::SHA384.base64digest(content)
+      "\"#{filepath}\" integrity=\"sha384-#{digest}\""
+    else
+      match
+    end
+  end
+end
