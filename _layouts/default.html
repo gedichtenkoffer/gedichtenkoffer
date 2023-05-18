@@ -1,16 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 
 <head>
   <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  <link rel="apple-touch-icon" async="true" href="{{ '/assets/icons/apple-touch-icon-152x152.png' | relative_url }}" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="mask-icon" async="true" href="{{ '/assets/icons/safari-pinned-tab.svg' | relative_url }}" color="#4A90D9" />
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  <meta charset="utf-8" />
+  <meta http-equiv="Cache-Control" content="public, max-age=63072000, immutable" />
+  <meta http-equiv="Expires" content="63072000" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="Description" content="Ben je op zoek naar gedichten over het leven. bijvoorbeeld de seizoenen, de liefde, geboorte of rouw. klik dan gerust door, al is het maar voor even. snuffel lekker door de teksten en ik zie je gauw!" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#4A90D9" />
+  <meta name="apple-mobile-web-app-title" content="gedichtenkoffer" />
+  <meta name="application-name" content="gedichtenkoffer">
+  <meta name="author" content="Sonja Zuijdervelt">
+  <meta name="keywords" content="gedichtenkoffer, gedichten, leven, seizoenen, liefde, geboorte, rouw, kerst, sinterklaas">
+  <meta name="theme-color" content="#4A90D9" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 </head>
 
 <body>
   <section>
     <nav>
       <a href="{{ '/' | relative_url }}">Over mij</a>
+
       {% assign sorted_pages = site.pages | sort: 'map' %}
       {% assign filtered_pages = sorted_pages | where_exp: "page", "page.map != null" %}
       {% assign unique_map_names = filtered_pages | map: 'map' | uniq %}
