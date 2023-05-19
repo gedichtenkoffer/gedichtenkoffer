@@ -4,6 +4,7 @@ plugins:
   - jekyll-default-layout
   - jekyll-optional-front-matter
   - jekyll-readme-index
-  - jekyll-titles-from-headings
   - jekyll-relative-links
+  - jekyll-sitemap
+  - jekyll-titles-from-headings
   - kramdown-parser-gfm
