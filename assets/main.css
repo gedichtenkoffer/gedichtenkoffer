@@ -42,6 +42,7 @@ article {
 }
 
 .noscript,
+#share,
 #toggle {
     display: none;
 }
