@@ -21,5 +21,5 @@ maar woorden vergemakkelijken het contact
 
 Uit nood ga ik ze dan maar typen \
 of zet ze zo snel mogelijk op papier \
-het is gebleken dat mijn woorden altijd achter liepen \
-op de gesproken, de snelle communicatie manier
+het bleek dat mijn geschreven woorden altijd achter liepen \
+op de gesprokene, de snelle communicatie manier

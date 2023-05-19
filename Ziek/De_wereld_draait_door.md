@@ -4,7 +4,7 @@ map: Ziek
 
 ## “De wereld draait door”
 
-De grond verdwijnt de onder mijn voeten vandaan \
+De grond verdwijnt onder mijn voeten vandaan \
 wat is boven, wat is onder? \
 Ik voel mijn lichaam onderuit gaan \
 mijn evenwicht verstoord, ik kan niet zonder
@@ -27,6 +27,6 @@ ik ben de weg een beetje kwijt
 C’est la vie, ben onderuit gehaald \
 draai-duizelig en licht verdwaald \
 sta weer op vol goede moed \
-en hoor mijn moeder: “Schatje, het komt weer goed!”
+hoor mijn moeder: “Schatje, het komt goed!”
 
 ![wereld](De_wereld_draait_door.jpg)

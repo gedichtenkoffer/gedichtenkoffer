@@ -20,4 +20,4 @@ Helaas geen fysieke knuffel van mij \
 het kan niet, het mag niet \
 maar in hart en hoofd ben ik erbij
 
-![Afscheid](Afscheid.jpg)
+![Afscheid](Afscheid.png)

@@ -7,4 +7,4 @@ map: Ziek
 Ik stond vanmorgen brak op \
 dat was een slecht begin \
 had ik dat niet gedaan \
-dan had ik het beter naar mijn zin
+had ik het beter naar mijn zin
