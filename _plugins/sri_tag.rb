@@ -3,15 +3,31 @@ require 'base64'
 
 module Jekyll
   module SRITagFilter
+    @@cache = {}
+
     def sri_tag(input)
       file_path = File.join(@context.registers[:site].dest, input)
+
       if File.exists?(file_path)
+        file_timestamp = File.mtime(file_path)
+
+        # Check if a hash has been computed and cached for this file,
+        # and if the file hasn't been updated since the last computation
+        if @@cache[file_path] && @@cache[file_path][:timestamp] == file_timestamp
+          return @@cache[file_path][:digest]
+        end
+
         content = File.read(file_path)
         digest = Digest::SHA384.base64digest(content)
-        # Jekyll.logger.info "SRI: Hashed #{file_path}"
-        "sha384-#{digest}"
+
+        # Cache the computed hash and the file's timestamp
+        @@cache[file_path] = {
+          timestamp: file_timestamp,
+          digest: "sha384-#{digest}"
+        }
+
+        @@cache[file_path][:digest]
       else
-        Jekyll.logger.warn "SRI: File not found #{file_path}"
         nil
       end
     end
