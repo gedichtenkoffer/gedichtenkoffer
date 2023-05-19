@@ -4,6 +4,7 @@
     "description": "Ben je op zoek naar gedichten over het leven. bijvoorbeeld de seizoenen, de liefde, geboorte of rouw. klik dan gerust door, al is het maar voor even. snuffel lekker door de teksten en ik zie je gauw!",
     "start_url": "/",
     "display": "standalone",
+    "lang": "nl",
     "background_color": "#EDEDED",
     "theme_color": "#4A90D9",
     "icons": [
