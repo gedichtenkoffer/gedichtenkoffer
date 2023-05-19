@@ -13,7 +13,8 @@ module Jekyll
 
         # Check if a hash has been computed and cached for this file,
         # and if the file hasn't been updated since the last computation
-        if @@cache[file_path] && @@cache[file_path][:timestamp] == file_timestamp
+        if @context.registers[:site].config["cache_sri"] &&
+          @@cache[file_path] && @@cache[file_path][:timestamp] == file_timestamp
           return @@cache[file_path][:digest]
         end
 
@@ -21,12 +22,14 @@ module Jekyll
         digest = Digest::SHA384.base64digest(content)
 
         # Cache the computed hash and the file's timestamp
-        @@cache[file_path] = {
-          timestamp: file_timestamp,
-          digest: "sha384-#{digest}"
-        }
+        if @context.registers[:site].config["cache_sri"]
+          @@cache[file_path] = {
+            timestamp: file_timestamp,
+            digest: "sha384-#{digest}"
+          }
+        end
 
-        @@cache[file_path][:digest]
+        "sha384-#{digest}"
       else
         nil
       end
