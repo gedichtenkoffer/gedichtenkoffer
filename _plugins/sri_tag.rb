@@ -6,7 +6,7 @@ module Jekyll
     @@cache = {}
 
     def sri_tag(input)
-      file_path = File.join(@context.registers[:site].dest, input)
+      file_path = File.join(@context.registers[:site].source, input)
 
       if File.exists?(file_path)
         file_timestamp = File.mtime(file_path)

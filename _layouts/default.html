@@ -3,14 +3,14 @@
 
 <head>
   <title>{%- if page.title -%}{{ page.title }}{%- else -%}Gedichtenkoffer{%- endif -%}</title>
-  <link rel="apple-touch-icon" async="true" href="{{ '/assets/icons/apple-touch-icon-152x152.png' | relative_url }}" integrity="{{ '/assets/icons/apple-touch-icon-152x152.png' | sri_tag }}" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" integrity="{{ '/favicon.ico' | sri_tag }}">
-  <link rel="mask-icon" async="true" href="{{ '/assets/icons/safari-pinned-tab.svg' | relative_url }}" integrity="{{ '/assets/icons/safari-pinned-tab.svg' | sri_tag }}"
-    color="#4A90D9" />
-  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}" integrity="{{ '/assets/main.css' | sri_tag }}">
+  <link rel="apple-touch-icon" async="true" href="{{ '/assets/icons/apple-touch-icon-152x152.png' | relative_url }}" sri_tag/>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" sri_tag>
+  <link rel="mask-icon" async="true" href="{{ '/assets/icons/safari-pinned-tab.svg' | relative_url }}" sri_tag color="#4A90D9" />
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}" sri_tag>
+  <link rel="manifest" href="{{ '/assets/manifest.json' | relative_url }}" sri_tag>
   <meta charset="utf-8" />
   <meta http-equiv="Cache-Control" content="public, max-age=63072000, immutable" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; connect-src 'self'; img-src 'self';">
   <meta http-equiv="Expires" content="63072000" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,6 +28,8 @@
 </head>
 
 <body>
+  <script type="text/javascript" src="{{ '/assets/register-sw.js' | relative_url }}" sri_tag></script>
+
   <section>
     {%- include_cached nav.html -%}
 
