@@ -3,85 +3,14 @@
 
 <head>
   <title>{%- if page.title -%}{{ page.title }}{%- else -%}Gedichtenkoffer{%- endif -%}</title>
-  <link rel="apple-touch-icon" async="true" href="{{ '/assets/icons/apple-touch-icon-152x152.png' | relative_url }}" sri_tag/>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" sri_tag>
-  <link rel="mask-icon" async="true" href="{{ '/assets/icons/safari-pinned-tab.svg' | relative_url }}" sri_tag color="#4A90D9" />
-  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}" sri_tag>
-  <link rel="manifest" href="{{ '/assets/manifest.json' | relative_url }}" sri_tag>
-  <meta charset="utf-8" />
-  <meta http-equiv="Cache-Control" content="public, max-age=63072000, immutable" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'https://gedichtenkoffer.nl/'; style-src 'self'; script-src 'self'; connect-src 'self'; manifest-src 'self'; img-src 'self';">
-  <meta http-equiv="Expires" content="63072000" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="Description"
-    content="Ben je op zoek naar gedichten over het leven. bijvoorbeeld de seizoenen, de liefde, geboorte of rouw. klik dan gerust door, al is het maar voor even. snuffel lekker door de teksten en ik zie je gauw!" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="#4A90D9" />
-  <meta name="apple-mobile-web-app-title" content="gedichtenkoffer" />
-  <meta name="application-name" content="gedichtenkoffer">
-  <meta name="author" content="Sonja Zuijdervelt">
-  <meta name="keywords"
-    content="gedichtenkoffer, gedichten, leven, seizoenen, liefde, geboorte, rouw, kerst, sinterklaas">
-  <meta name="theme-color" content="#4A90D9" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  {%- include_cached meta.html -%}
 </head>
 
 <body>
   <script type="text/javascript" src="{{ '/assets/register-sw.js' | relative_url }}" sri_tag></script>
 
   <section>
-    <noscript>
-      <details>
-        <summary>☰ Menu</summary>
-        <nav aria-label="menu">
-          <a href="{{ '/' | relative_url }}" aria-label="Over mij">Over mij</a>
-    
-          {%- assign sorted_pages = site.pages | sort: 'map' -%}
-          {%- assign filtered_pages = sorted_pages | where_exp: "page", "page.map != null" -%}
-          {%- assign unique_map_names = filtered_pages | map: 'map' | uniq -%}
-          {%- for map_name in unique_map_names -%}
-          <details>
-            <summary>{{ map_name }}</summary>
-            <ul>
-              {%- for page in filtered_pages -%}
-              {%- if page.map == map_name -%}
-              <li><a href="{{ page.url | relative_url }}" aria-label="{{ page.title }}">{{ page.title }}</a></li>
-              {%- endif -%}
-              {%- endfor -%}
-            </ul>
-          </details>
-          {%- endfor -%}
-        </nav>
-      </details>
-    </noscript>
-    
-    <header>
-      <button id="toggle" class="secondary noscript" aria-label="menu">☰ Menu</button>
-    </header>
-    
-    <script type="text/javascript" src="{{ '/assets/resize.js' | relative_url }}" sri_tag></script>
-    <script type="text/javascript" src="{{ '/assets/noscript.js' | relative_url }}" sri_tag></script>
-    
-    <nav id="menu" class="noscript" aria-label="menu">
-      <a href="{{ '/' | relative_url }}">Over mij</a>
-    
-      {%- assign sorted_pages = site.pages | sort: 'map' -%}
-      {%- assign filtered_pages = sorted_pages | where_exp: "page", "page.map != null" -%}
-      {%- assign unique_map_names = filtered_pages | map: 'map' | uniq -%}
-      {%- for map_name in unique_map_names -%}
-      <details>
-        <summary>{{ map_name }}</summary>
-        <ul>
-          {%- for page in filtered_pages -%}
-          {%- if page.map == map_name -%}
-          <li><a href="{{ page.url | relative_url }}" aria-label="{{ page.title }}">{{ page.title }}</a></li>
-          {%- endif -%}
-          {%- endfor -%}
-        </ul>
-      </details>
-      {%- endfor -%}
-    </nav>
+    {%- include_cached nav.html -%}
 
     <article aria-label="gedicht">
       {{ content }}
