@@ -3,7 +3,6 @@ map: Sinterklaas
 ---
 
 ## Cadeautje ingeslikt
-License: cc
 
 Het is alweer de laatste maand van het jaar \
 alle cadeautjes zijn ingepakt en liggen klaar \

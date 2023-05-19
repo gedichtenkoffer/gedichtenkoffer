@@ -3,7 +3,6 @@ map: Sinterklaas
 ---
 
 ## Theater kaartjes
-License: cc
 
 De jonge generatie zit graag achter de pc \
 de muis is hun allerbeste vriend \

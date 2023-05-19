@@ -3,7 +3,6 @@ map: Sinterklaas
 ---
 
 ## Leesvoer
-License: cc
 
 Een cadeautje groot of klein,  \
 op de verjaardag van de Sint \

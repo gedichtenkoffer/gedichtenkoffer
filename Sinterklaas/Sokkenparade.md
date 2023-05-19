@@ -3,7 +3,6 @@ map: Sinterklaas
 ---
 
 ## Sokkenparade
-License: cc
 
 Ze houden je lekker warm, zijn niet overbodig \
 je hebt er altijd twee van nodig \

@@ -3,7 +3,6 @@ map: Sinterklaas
 ---
 
 ## Groene vingers
-License: cc
 
 Ze houdt van tuinieren \
 'Groene vingers' noemt men dat \

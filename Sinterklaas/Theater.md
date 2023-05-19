@@ -3,7 +3,6 @@ map: Sinterklaas
 ---
 
 ## Theater
-License: cc
 
 Dit is geen cadeautje om mee te spelen \
 maar er wordt voor jou gespeeld \

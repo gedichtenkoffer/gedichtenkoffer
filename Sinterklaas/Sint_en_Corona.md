@@ -3,7 +3,6 @@ map: Sinterklaas
 ---
 
 ## Sint en Corona
-License: cc
 
 Corona is in 2020 het meest gebruikte woord \
 tot een jaar eerder hadden we er nog nooit van gehoord \
