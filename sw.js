@@ -6,8 +6,8 @@ self.addEventListener('install', evt => {
         fetch('/assets.json').then(resp => resp.json()).then(assets => {
             caches.open(staticCacheName).then(cache => {
                 console.log('caching shell assets');
-                cache.addAll(assets);
-            });
+                return cache.addAll(assets);
+            }).catch(err => console.log(`Error caching assets: ${err}`));
         })
     );
 });
