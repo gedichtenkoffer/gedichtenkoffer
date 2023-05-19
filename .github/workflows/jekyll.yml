@@ -22,23 +22,31 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '16'
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
         with:
           ruby-version: '3.1'
           bundler-cache: true
           cache-version: 0
+
+      - name: Install libvips
+        run: sudo apt-get update && sudo apt-get install -y libvips42 libvips-tools
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
+
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 

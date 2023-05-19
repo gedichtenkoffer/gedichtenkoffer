@@ -1,0 +1,53 @@
+<noscript>
+  <details>
+    <summary>☰ Menu</summary>
+    <nav aria-label="menu">
+      <a href="{{ '/' | relative_url }}" aria-label="Over mij">Over mij</a>
+
+      {%- assign sorted_pages = site.pages | sort: 'map' -%}
+      {%- assign filtered_pages = sorted_pages | where_exp: "page", "page.map != null" -%}
+      {%- assign unique_map_names = filtered_pages | map: 'map' | uniq -%}
+      {%- for map_name in unique_map_names -%}
+      <details>
+        <summary>{{ map_name }}</summary>
+        <ul>
+          {%- for page in filtered_pages -%}
+          {%- if page.map == map_name -%}
+          <li><a href="{{ page.url | relative_url }}" aria-label="{{ page.title }}">{{ page.title }}</a></li>
+          {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </details>
+      {%- endfor -%}
+    </nav>
+  </details>
+</noscript>
+
+<header>
+  <button id="toggle" class="secondary noscript" aria-label="menu">☰ Menu</button>
+</header>
+
+<script type="text/javascript" src="{{ '/assets/resize.js' | relative_url }}"
+  integrity="{{ '/assets/resize.js' | sri_tag }}"></script>
+<script type="text/javascript" src="{{ '/assets/noscript.js' | relative_url }}"
+  integrity="{{ '/assets/noscript.js' | sri_tag }}"></script>
+
+<nav id="menu" class="noscript" aria-label="menu">
+  <a href="{{ '/' | relative_url }}">Over mij</a>
+
+  {%- assign sorted_pages = site.pages | sort: 'map' -%}
+  {%- assign filtered_pages = sorted_pages | where_exp: "page", "page.map != null" -%}
+  {%- assign unique_map_names = filtered_pages | map: 'map' | uniq -%}
+  {%- for map_name in unique_map_names -%}
+  <details>
+    <summary>{{ map_name }}</summary>
+    <ul>
+      {%- for page in filtered_pages -%}
+      {%- if page.map == map_name -%}
+      <li><a href="{{ page.url | relative_url }}" aria-label="{{ page.title }}">{{ page.title }}</a></li>
+      {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </details>
+  {%- endfor -%}
+</nav>

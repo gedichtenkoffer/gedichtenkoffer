@@ -2,9 +2,14 @@ safe: false
 
 plugins:
   - jekyll-default-layout
+  - jekyll-include-cache
   - jekyll-optional-front-matter
   - jekyll-readme-index
   - jekyll-relative-links
   - jekyll-sitemap
   - jekyll-titles-from-headings
+  - jekyll_picture_tag
   - kramdown-parser-gfm
+
+picture:
+  ignore_missing_images: true

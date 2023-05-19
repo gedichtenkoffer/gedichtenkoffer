@@ -13,3 +13,6 @@ gem "jekyll-sitemap"
 gem "jekyll-titles-from-headings"
 gem "kramdown-parser-gfm"
 gem "uglifier"
+gem 'jekyll-include-cache'
+gem 'jekyll_picture_tag'
+gem 'rufo'
