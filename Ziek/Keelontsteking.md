@@ -5,7 +5,7 @@ map: Ziek
 ## Keelontsteking
 
 Heb het mes op mijn keel \
-het lijkt wel een stuk schuurpapier  \
+het lijkt wel een stuk schuurpapier \
 ben er stil van, zeg niet veel \
 slikken en praten geeft me even geen plezier
 
