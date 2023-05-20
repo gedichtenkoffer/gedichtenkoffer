@@ -4,8 +4,10 @@ module Jekyll
       # If input is nil, return an empty string
       return "" if input.nil?
 
-      # Read and return file content
-      path = File.join(site.source, input)
+      # Try to access source as a hash
+      source = site['source']
+
+      path = File.join(source, input)
       File.read(path)
     rescue StandardError => e
       Jekyll.logger.error "Error reading file: #{e.message}"
