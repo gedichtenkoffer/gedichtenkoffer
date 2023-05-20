@@ -19,4 +19,4 @@ Het ontspant lichaam en geest\
 wie geniet er nu het meest?
 Ik weet het even nie
 
-![hond](hond.png)
+![hond](hondje.png)
