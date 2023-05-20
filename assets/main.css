@@ -60,12 +60,16 @@ article {
         display: none;
     }
 
+    #share,
     #toggle {
-        display: block;
         text-align: center;
         width: 100%;
-        margin: 0 auto;
+        margin: 1em auto;
         overflow: hidden;
+    }
+
+    #toggle {
+        display: block;
     }
 }
 
@@ -141,7 +145,7 @@ summary:focus {
 }
 
 .primary {
-    color: var(--text-color);
+    color: var(--text-dark-color);
 }
 
 nav a:hover,
