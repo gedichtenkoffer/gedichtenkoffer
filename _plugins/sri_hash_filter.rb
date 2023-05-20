@@ -11,7 +11,7 @@ module Jekyll
       hash = Base64.strict_encode64(digest.digest(input))
       "sha384-#{hash}"
     rescue StandardError => e
-      Jekyll.logger.error "Error integriting #{input}: #{e.message}"
+      Jekyll.logger.error "Error integriting input: #{e.message}"
       ""
     end
   end

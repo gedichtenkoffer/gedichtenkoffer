@@ -8,7 +8,7 @@ module Jekyll
       path = File.join(site.source, input)
       File.read(path)
     rescue StandardError => e
-      Jekyll.logger.error "Error reading input file: #{e.message}"
+      Jekyll.logger.error "Error reading file: #{e.message}"
       ""
     end
   end
