@@ -38,7 +38,7 @@ module Jekyll
             f.write(minified_content)  # Write the minified content
           end
         rescue ArgumentError => e
-          Jekyll.logger.error "Error processing #{file}: #{e.message}"
+          Jekyll.logger.error "Error processing file: #{e.message}"
         end
       end
     end

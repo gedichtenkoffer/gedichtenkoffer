@@ -1,15 +1,13 @@
 module Jekyll
   module MarkdownListFilter
     def markdown_list(site)
-      md_files = []
-      source = site.config['source']
-      destination = site.config['destination']
-      Dir.glob(File.join(source, '**', '*.md')) do |file|
-        html_file = file.sub(source, destination).sub('.md', '.html')
+      list = []
+      Dir.glob(File.join(site.source, '**', '*.md')) do |file|
+        html_file = file.sub(source, site.destination).sub('.md', '.html')
         # Append the relative path to the array
-        md_files << html_file.sub(destination, '')
+        list << html_file.sub(site.destination, '')
       end
-      md_files
+      list
     rescue StandardError => e
       Jekyll.logger.error "Error listing input: #{e.message}"
       []
