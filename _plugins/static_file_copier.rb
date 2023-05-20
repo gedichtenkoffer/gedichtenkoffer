@@ -38,8 +38,7 @@ module Jekyll
             f.write(minified_content)  # Write the minified content
           end
         rescue ArgumentError => e
-          puts "Error processing file: #{file}"
-          puts e.message
+          Jekyll.logger.error "Error processing #{file}: #{e.message}"
         end
       end
     end
@@ -64,7 +63,7 @@ module Jekyll
 
           return processed_content
         rescue Liquid::SyntaxError => e
-          puts "Content contains {{ and }}, but is not a valid Liquid syntax. Error: #{e.message}"
+          Jekyll.logger.error "Content contains {{ and }}, but is not a valid Liquid syntax. Error: #{e.message}"
           return content
         end
       else
