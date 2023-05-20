@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', function (event) {
     if (navigator.share) {
         document.getElementById('share').style.display = 'block';
         document.getElementById('share').addEventListener('click', shareCurrentPage);
