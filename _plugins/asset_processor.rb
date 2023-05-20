@@ -22,7 +22,22 @@ module Jekyll
         relative_path = file.sub(@source, '')
   
         begin
-          minified_content = process(relative_path)
+          if File.exist?(file)
+            # Process the file before copying
+            content = File.read(file)
+    
+            # Apply some transformations to the content
+            # This is where you'd put your processing logic
+            processed_content = process_content(content)
+    
+            # Get the file extension
+            ext = File.extname(file)
+    
+            # Minify the content based on its extension
+            minified_content = minify(processed_content, ext)
+          else
+            raise "File #{file} not found."
+          end
           dest_path = File.join(@destination, relative_path)
   
           FileUtils.mkdir_p(File.dirname(dest_path))
@@ -33,31 +48,6 @@ module Jekyll
           Jekyll.logger.error "Error processing assets: #{e.message}"
         end
       end
-    end
-
-    def process(input)
-      raise "Site source not set in processing filter" if @site.source.nil?
-
-      file = @source + input
-      if File.exist?(file)
-        # Process the file before copying
-        content = File.read(file)
-
-        # Apply some transformations to the content
-        # This is where you'd put your processing logic
-        processed_content = process_content(content)
-
-        # Get the file extension
-        ext = File.extname(file)
-
-        # Minify the content based on its extension
-        minify(processed_content, ext)
-      else
-        raise "File #{file} not found."
-      end
-    rescue StandardError => e
-      Jekyll.logger.error "Error in processing filter: #{e.message}"
-      ""
     end
 
     def process_content(content)
@@ -95,17 +85,20 @@ module Jekyll
       ""
     end
 
-    def read_file(input)
-      raise "Site source not set in the file reader" if @site.source.nil?
+    def process(input)
+      Jekyll.logger.info "process method is being executed..."
+      Jekyll.logger.error "process method has input: #{input}"
+      raise "Site source not set in processing filter" if @site.source.nil?
 
       file = @source + input
       if File.exist?(file)
-        File.read(file)
+        content = File.read(file)
+        return process_content(content)
       else
         raise "File #{file} not found."
       end
     rescue StandardError => e
-      Jekyll.logger.error "Error processing file: #{e.message}"
+      Jekyll.logger.error "Error in processing filter: #{e.message}"
       ""
     end
 
@@ -116,7 +109,9 @@ module Jekyll
 
       # Map over the static_files array, pulling out the 'path' values
       static_files = @site.static_files.map { |file| file['path'] }
+      Jekyll.logger.error "Static files: #{static_files}"
       assets = @site.data.assets
+      Jekyll.logger.error "Assets: #{assets}"
 
       static_files + assets
     rescue StandardError => e
@@ -132,13 +127,8 @@ module Jekyll
       asset_processor.process(input)
     end
 
-    def read_file(input)
-      site = @context.registers[:site]
-      asset_processor = AssetProcessor.new(site)
-      asset_processor.read_file(input)
-    end
-
     def get_assets
+      Jekyll.logger.error "run get assets"
       site = @context.registers[:site]
       asset_processor = AssetProcessor.new(site)
       asset_processor.get_assets
