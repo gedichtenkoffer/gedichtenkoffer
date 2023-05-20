@@ -2,7 +2,7 @@
 ---
 
 var staticCacheName = 'site-static-v1';
-var assets = {{ assets: site | jsonify }};
+var assets = {{ get_assets | jsonify }};
 
 // install event
 self.addEventListener('install', function (evt) {
