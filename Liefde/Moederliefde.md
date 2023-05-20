@@ -14,4 +14,4 @@ zo puur en onbevangen \
 onvoorwaardelijke moederliefde \
 dooft nooit uit en duurt het hele leven
 
-![Moederliefde](Moederliefde.jpg)
+![strik](strik.png)
