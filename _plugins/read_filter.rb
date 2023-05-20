@@ -4,9 +4,7 @@ module Jekyll
       # If input is nil, return an empty string
       return "" if input.nil?
 
-      # Try to access source as a hash
       source = site['source']
-
       path = File.join(source, input)
       File.read(path)
     rescue StandardError => e
