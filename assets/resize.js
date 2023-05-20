@@ -1,5 +1,5 @@
 window.addEventListener('resize', function () {
-    const menu = document.getElementById('menu');
+    var menu = document.getElementById('menu');
     if (window.innerWidth >= 800) {
         menu.style.display = 'block';
     } else if (window.innerWidth < 800 && menu.style.display !== 'block') {
