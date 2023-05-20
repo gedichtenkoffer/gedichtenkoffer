@@ -217,6 +217,7 @@ nav ul {
 nav,
 button {
     margin: 1em auto;
+    min-width: 10em;
 }
 
 button,
