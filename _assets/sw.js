@@ -2,8 +2,8 @@
 ---
 
 var staticCacheName = 'site-static-v1';
-var assets = {{ '/_assets' | assets | jsonify }};
-var list = {{ '/' | markdown_list | jsonify }};
+var assets = {{ '/_assets' | assets: site | jsonify }};
+var list = {{ markdown_list: site | jsonify }};
 var assets_list = assets.concat(list);
 
 // install event
