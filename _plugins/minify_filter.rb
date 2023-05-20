@@ -5,6 +5,12 @@ require 'htmlcompressor'
 module Jekyll
   module MinifyFilter
     def minify(input, type)
+      # If input is nil, return an empty string
+      return "" if input.nil?
+      
+      # Remove the front matter
+      input = input.sub(/\A---.*?---\s/m, '')
+
       case type
       when 'js'
         uglifier = Uglifier.new(harmony: true)

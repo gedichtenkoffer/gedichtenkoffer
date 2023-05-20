@@ -1,6 +1,9 @@
 module Jekyll
   module AssetsFilter
     def assets(input)
+      # If input is nil, return an empty string
+      return [] if input.nil?
+
       # Assuming input is the root directory containing your assets
       assets = []
       Dir.glob(File.join(input, '**', '*.{html,css,js,jpeg,jpg,webp,svg}')) do |file|

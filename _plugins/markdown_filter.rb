@@ -1,6 +1,9 @@
 module Jekyll
   module MarkdownListFilter
     def markdown_list(input, site)
+      # If input is nil, return an empty string
+      return [] if input.nil?
+      
       md_files = []
       source = site.config['source']
       destination = site.config['destination']

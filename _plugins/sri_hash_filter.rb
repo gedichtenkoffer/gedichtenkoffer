@@ -4,6 +4,9 @@ require 'base64'
 module Jekyll
   module SRIHashFilter
     def integrity(input)
+      # If input is nil, return an empty string
+      return "" if input.nil?
+
       file_path = File.join(@context.registers[:site].dest, input)
       if File.file?(file_path)
         data = File.read(file_path)
