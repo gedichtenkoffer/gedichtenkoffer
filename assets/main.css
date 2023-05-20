@@ -38,6 +38,7 @@ progress {
     top: 0;
     left: 0;
     z-index: 1000;
+    display: none;
 }
 
 progress::-webkit-progress-bar {
