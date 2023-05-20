@@ -6,7 +6,6 @@
 :root {
     --bg-color: #EDEDED;
     --text-color: #1A1A1A;
-    --text-dark-color: #D3D7CF;
     --primary-color: #4A90D9;
     --secondary-color: #FFFFFF;
     --border-color: #CCCCCC;
@@ -16,7 +15,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --bg-color: #2E3436;
-        --text-color: var(--text-dark-color);
+        --text-color: #D3D7CF;
         --primary-color: #3465A4;
         --secondary-color: #555753;
         --border-color: #888A85;
@@ -144,14 +143,17 @@ summary:focus {
     background-color: var(--primary-color);
 }
 
-.primary {
-    color: var(--text-dark-color);
-}
-
+.primary,
 nav a:hover,
 nav a:focus nav ul li:hover,
 nav ul li:focus {
     color: var(--secondary-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    .primary {
+        color: var(--text-color);
+    }
 }
 
 .primary:hover,
