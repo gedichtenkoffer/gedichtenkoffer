@@ -140,7 +140,10 @@ summary:focus {
     background-color: var(--primary-color);
 }
 
-.primary,
+.primary {
+    color: var(--text-color);
+}
+
 nav a:hover,
 nav a:focus nav ul li:hover,
 nav ul li:focus {
