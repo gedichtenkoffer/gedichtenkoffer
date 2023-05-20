@@ -55,8 +55,11 @@ module Jekyll
           # Create a Liquid template from the content
           template = Liquid::Template.parse(content)
 
-          # Render the template with the site's data
-          processed_content = template.render(site.site_payload)
+          # Add 'site' to the Liquid context
+          context = { 'site' => site }.merge(site.site_payload)
+    
+          # Render the template with the context data
+          processed_content = template.render(context)
 
           # Remove the front matter
           processed_content = processed_content.gsub(/^---\s*---\s*/, '')
@@ -70,6 +73,8 @@ module Jekyll
         # Return the original content if it's not a valid Liquid template
         return content
       end
+    rescue StandardError => e
+      Jekyll.logger.error "Error processing content: #{e.message}"
     end
   end
 end
