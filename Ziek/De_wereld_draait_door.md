@@ -29,4 +29,4 @@ draai-duizelig en licht verdwaald \
 sta weer op vol goede moed \
 hoor mijn moeder: “Schatje, het komt goed!”
 
-![wereld](De_wereld_draait_door.jpg)
+![draaierij](draaierij.png)

@@ -14,4 +14,4 @@ Ik schrijf het maar eens op \
 Ik dacht zo bij mezelf  \
 Ik zoek de stilte knop
 
-![Denken](Denken.jpg)
+![schrijvers logo](schrijverslogo.png)
