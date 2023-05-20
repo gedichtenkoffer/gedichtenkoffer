@@ -7,15 +7,9 @@ module Jekyll
       # If input is nil, return an empty string
       return "" if input.nil?
 
-      file_path = File.join(@context.registers[:site].dest, input)
-      if File.file?(file_path)
-        data = File.read(file_path)
-        digest = OpenSSL::Digest::SHA384.new
-        hash = Base64.strict_encode64(digest.digest(data))
-        "sha384-#{hash}"
-      else
-        raise "File not found: #{input}"
-      end
+      digest = OpenSSL::Digest::SHA384.new
+      hash = Base64.strict_encode64(digest.digest(input))
+      "sha384-#{hash}"
     end
   end
 end
