@@ -2,21 +2,14 @@ require 'fileutils'
 require 'liquid'
 require_relative 'minify_filter.rb'  # Include the minify filter script
 
-Jekyll::Hooks.register :site, :post_write do |site|
-  Jekyll::StaticFileCopier.new.copy(site)
-end
-
 module Jekyll
-  class StaticFileCopier
+  module ProcessFilter
     include MinifyFilter  # Include the minify filter methods
 
-    def copy(site)
+    def process(input, site)
       source = site.source + "/_assets/"
-      destination = site.dest
-
-      Dir.glob(source + "**/*").each do |file|
-        next if File.directory?(file)
-
+      file = source + input
+      if File.exist?(file)
         begin
           # Process the file before copying
           content = File.read(file)
@@ -24,22 +17,17 @@ module Jekyll
           # Apply some transformations to the content
           # This is where you'd put your processing logic
           processed_content = process_content(content, site)
-          
+
           # Get the file extension
           ext = File.extname(file)
 
           # Minify the content based on its extension
-          minified_content = minify(processed_content, ext)
-
-          dest_path = File.join(destination, file.sub(source, ''))
-
-          FileUtils.mkdir_p(File.dirname(dest_path))
-          File.open(dest_path, 'w') do |f|
-            f.write(minified_content)  # Write the minified content
-          end
+          minify(processed_content, ext)
         rescue ArgumentError => e
           Jekyll.logger.error "Error processing file: #{e.message}"
         end
+      else
+        raise "File #{file} not found."
       end
     end
 
@@ -77,4 +65,39 @@ module Jekyll
       Jekyll.logger.error "Error processing content: #{e.message}"
     end
   end
+
+  class AssetProcessor
+    include ProcessFilter
+
+    def copy(site)
+      source = site.source + "/_assets/"
+      destination = site.dest
+
+      Dir.glob(source + "**/*").each do |file|
+        next if File.directory?(file)
+
+        # Calculate the relative path
+        relative_path = file.sub(source, '')
+
+        begin
+          minified_content = process(relative_path, site)
+          dest_path = File.join(destination, relative_path)
+
+          FileUtils.mkdir_p(File.dirname(dest_path))
+          File.open(dest_path, 'w') do |f|
+            f.write(minified_content)  # Write the minified content
+          end
+        rescue ArgumentError => e
+          Jekyll.logger.error "Error processing file: #{e.message}"
+        end
+      end
+    end
+  end
+
+end
+
+Liquid::Template.register_filter(Jekyll::ProcessFilter)
+
+Jekyll::Hooks.register :site, :post_write do |site|
+  Jekyll::AssetProcessor.new.copy(site)
 end
