@@ -13,6 +13,9 @@ module Jekyll
         md_files << html_file.sub(destination, '')
       end
       md_files
+    rescue StandardError => e
+      Jekyll.logger.error "Error listing #{input}: #{e.message}"
+      []
     end
   end
 end

@@ -11,6 +11,9 @@ module Jekyll
         assets << file.sub(input, '')
       end
       assets
+    rescue StandardError => e
+      Jekyll.logger.error "Error asseting #{input}: #{e.message}"
+      []
     end
   end
 end

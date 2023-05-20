@@ -5,6 +5,9 @@ module Jekyll
       return "" if input.nil?
 
       input.gsub(/\!\[(.*?)\]\((.*?)\)/, "{%- picture jpt-webp \\2 alt='\\1' -%}")
+    rescue StandardError => e
+      Jekyll.logger.error "Error imagenifing #{input}: #{e.message}"
+      ""
     end
   end
 end
