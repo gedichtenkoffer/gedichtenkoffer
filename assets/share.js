@@ -9,5 +9,5 @@ function shareCurrentPage() {
     navigator.share({
         title: document.title,
         url: window.location.href
-    }).catch(console.error);
+    }).catch(console.log);
 }
