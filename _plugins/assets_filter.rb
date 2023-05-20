@@ -1,11 +1,9 @@
 module Jekyll
   module AssetsFilter
     def assets(site)
-      parsed_source = JSON.parse(site_source)
-
       # Map over the static_files array, pulling out the 'path' values
-      static_files = parsed_source[site.source.static_files].map { |file| file['path'] }
-      assets = parsed_source[site.source.data.assets]
+      static_files = site['static_files'].map { |file| file['path'] }
+      assets = site['data']['assets']
       list = static_files + assets
 
       list
