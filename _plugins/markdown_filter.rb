@@ -1,9 +1,6 @@
 module Jekyll
   module MarkdownListFilter
-    def markdown_list(input, site)
-      # If input is nil, return an empty string
-      return [] if input.nil?
-      
+    def markdown_list(site)
       md_files = []
       source = site.config['source']
       destination = site.config['destination']
@@ -14,7 +11,7 @@ module Jekyll
       end
       md_files
     rescue StandardError => e
-      Jekyll.logger.error "Error listing #{input}: #{e.message}"
+      Jekyll.logger.error "Error listing input: #{e.message}"
       []
     end
   end
