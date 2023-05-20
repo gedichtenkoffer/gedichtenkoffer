@@ -4,9 +4,8 @@ module Jekyll
       # Map over the static_files array, pulling out the 'path' values
       static_files = site['static_files'].map { |file| file['path'] }
       assets = site['data']['assets']
-      list = static_files + assets
-
-      list
+      
+      static_files + assets
     rescue StandardError => e
       Jekyll.logger.error "Error asseting list: #{e.message}"
       []

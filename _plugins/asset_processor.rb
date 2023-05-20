@@ -10,25 +10,23 @@ module Jekyll
       source = site.source + "/_assets/"
       file = source + input
       if File.exist?(file)
-        begin
-          # Process the file before copying
-          content = File.read(file)
+        # Process the file before copying
+        content = File.read(file)
 
-          # Apply some transformations to the content
-          # This is where you'd put your processing logic
-          processed_content = process_content(content, site)
+        # Apply some transformations to the content
+        # This is where you'd put your processing logic
+        processed_content = process_content(content, site)
 
-          # Get the file extension
-          ext = File.extname(file)
+        # Get the file extension
+        ext = File.extname(file)
 
-          # Minify the content based on its extension
-          minify(processed_content, ext)
-        rescue ArgumentError => e
-          Jekyll.logger.error "Error processing file: #{e.message}"
-        end
+        # Minify the content based on its extension
+        minify(processed_content, ext)
       else
         raise "File #{file} not found."
       end
+    rescue StandardError => e
+      Jekyll.logger.error "Error in processing filter: #{e.message}"
     end
 
     # A simple example of a processing function
@@ -87,13 +85,12 @@ module Jekyll
           File.open(dest_path, 'w') do |f|
             f.write(minified_content)  # Write the minified content
           end
-        rescue ArgumentError => e
-          Jekyll.logger.error "Error processing file: #{e.message}"
+        rescue StandardError => e
+          Jekyll.logger.error "Error processing assets: #{e.message}"
         end
       end
     end
   end
-
 end
 
 Liquid::Template.register_filter(Jekyll::ProcessFilter)
