@@ -19,7 +19,7 @@ och was het maar alvast zo ver  \
 genieten in volle zalen met geschater  \
 ontspannen blijheid, vrijheid her en der 
 
-Her lijkt zo lang geleden \
+Het lijkt zo lang geleden \
 wat gewoon was is niet gewoon  \
 het nieuwe normaal is nu het heden  \
 2020 valt compleet uit de toon 

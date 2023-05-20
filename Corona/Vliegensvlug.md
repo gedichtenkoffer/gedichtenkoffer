@@ -10,7 +10,7 @@ Anthony Fokker is de eerste Hollandse man \
 die met zijn vliegtuig vliegen kan
 
 Wat begon als een jongensdroom \
-Is reeds tientallen jaren heel gewoon  \
+is reeds tientallen jaren heel gewoon  \
 vliegtuigen brengen jou vliegensvlug \
 naar de andere kant van de wereld en terug
 
