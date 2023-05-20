@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <script type="text/javascript" src="{{ '/assets/register-sw.js' | relative_url }}" sri_tag></script>
+  {%- include_cached sw.html -%}
 
   <section>
     {%- include_cached nav.html -%}
@@ -17,10 +17,7 @@
     </article>
   </section>
 
-  <section>
-    <button id="share" class="primary">Share ↗️</button>
-    <script type="text/javascript" src="{{ '/assets/share.js' | relative_url }}" sri_tag></script>
-  </section>
+  {%- include_cached share.html -%}
 
   <footer>
     {%- capture footer_content -%}
