@@ -3,11 +3,9 @@ module Jekyll
     def read(input, site)
       # If input is nil, return an empty string
       return "" if input.nil?
-      
-      source = site.config['source']
-      path = File.join(source, input)
 
       # Read and return file content
+      path = File.join(site.source, input)
       File.read(path)
     rescue StandardError => e
       Jekyll.logger.error "Error reading #{input} file: #{e.message}"
