@@ -2,9 +2,7 @@
 ---
 
 var staticCacheName = 'site-static-v1';
-var assets = {{ '/_assets' | assets: site | jsonify }};
-var list = {{ markdown_list: site | jsonify }};
-var assets_list = assets.concat(list);
+var assets = {{ assets: site | jsonify }};
 
 // install event
 self.addEventListener('install', function (evt) {
@@ -14,7 +12,7 @@ self.addEventListener('install', function (evt) {
             var total = assets.length;
             var loaded = 0;
             // iterate over each asset
-            return Promise.all(assets_list.map(function (asset) {
+            return Promise.all(assets.map(function (asset) {
                 return fetch(asset).then(function (resp) {
                     loaded++;
                     return self.clients.matchAll().then(function (clients) {

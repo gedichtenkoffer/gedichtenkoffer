@@ -1,18 +1,16 @@
 module Jekyll
   module AssetsFilter
-    def assets(input, site)
-      # If input is nil, return an empty string
-      return [] if input.nil?
+    def assets(site)
+      parsed_source = JSON.parse(site_source)
 
-      # Assuming input is the root directory containing your assets
-      assets = []
-      Dir.glob(File.join(site.source, input, '**', '*.{html,css,js,jpeg,jpg,webp,svg}')) do |file|
-        # Push relative path to the assets array
-        assets << file.sub(input, '')
-      end
-      assets
+      # Map over the static_files array, pulling out the 'path' values
+      static_files = parsed_source[site.source.static_files].map { |file| file['path'] }
+      assets = parsed_source[site.source.data.assets]
+      list = static_files + assets
+
+      list
     rescue StandardError => e
-      Jekyll.logger.error "Error asseting input: #{e.message}"
+      Jekyll.logger.error "Error asseting list: #{e.message}"
       []
     end
   end
