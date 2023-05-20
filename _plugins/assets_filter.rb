@@ -12,7 +12,7 @@ module Jekyll
       end
       assets
     rescue StandardError => e
-      Jekyll.logger.error "Error asseting #{input}: #{e.message}"
+      Jekyll.logger.error "Error asseting input: #{e.message}"
       []
     end
   end
