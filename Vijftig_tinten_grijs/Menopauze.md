@@ -24,4 +24,4 @@ en stopt een waaier in haar tas \
 het is niet te stoppen, het proces \
 toch blijft ze, jong van geest, innerlijk zoals ze was
 
-![waaier](Overgang waaier.png)
+![waaier](waaier.png)
