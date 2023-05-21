@@ -9,4 +9,4 @@ je bent er altijd, al ben je er niet meer \
 je leeft voort in mij, het voelt vertrouwd, is goed \
 mooie herinneringen overwinnen, telkens weer
 
-![Mams](Mams.jpg)
+![sjaal](sjaal.png)

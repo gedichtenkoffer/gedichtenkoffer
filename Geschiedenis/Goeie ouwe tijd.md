@@ -25,7 +25,7 @@ ik vind het toch maar een knap lastig pakket\
 één knop voor aan en uit is niet meer hoe het gaat
 
 Herinneringen uit vervlogen tijden\
-wat vroeger was wordt Nostalgie.\
+wat vroeger was wordt Nostalgie\
 verandering is niet te vermijden\
 maar dat hoeft ook helemaal niet
 
