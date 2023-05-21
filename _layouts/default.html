@@ -4,11 +4,11 @@
 
 <head>
   <title>{%- if page.title -%}{{ page.title }}{%- else -%}Gedichtenkoffer{%- endif -%}</title>
-
   {%- capture meta_content -%}
     {%- include_cached meta.html -%}
   {%- endcapture -%}
   {{ meta_content | minify: 'html' }}
+  <meta name="author" content="Sonja Zuijdervelt">
 </head>
 
 <body>
