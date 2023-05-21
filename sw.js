@@ -1,10 +1,8 @@
 ---
 ---
 
-console.log({{ 'now' | date: "%Y" }});
-
 var staticCacheName = 'site-static-v1';
-var assets = {{ get_assets | jsonify }};
+var assets = {{ '/' | source_path | assets | jsonify }};
 
 // install event
 self.addEventListener('install', function (evt) {
