@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.getElementsByTagName('button');
 
     const registerServiceWorker = () => {
-        if ('serviceWorker' in navigator) {
+        if ('serviceWorker' in navigator && !navigator.serviceWorker.controller) {
             const swIntegrity = {{ '/sw.js' | source_path | read | process_content | minify: 'js' | sri_hash | jsonify }};
 
             fetch('/sw.js')
@@ -59,6 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 .catch((err) => {
                     return console.log(err);
                 });
+        } else if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+            console.log('Service worker already registered');
         }
     };
 
