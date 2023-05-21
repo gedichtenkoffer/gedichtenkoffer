@@ -5,7 +5,9 @@ module Jekyll
         return list if input.nil?
   
         list = []
-        Dir.glob(File.join(input, '**', '*.{md,css,js,png,jpeg,jpg,webp,svg}')) do |file|
+        list.push('/index.html')
+
+        Dir.glob(File.join(input, '**/*', '*.{md,css,js,png,jpeg,jpg,webp,svg}')) do |file|
           path = file.sub(input, '')
           next if File.basename(path).start_with?('.', '_')
 
