@@ -6,7 +6,7 @@ require 'json'
 module Jekyll
   module MinifyFilter
     def minify(input, type)
-      return "" if input.nil?
+      return "" if input.nil? || !input.is_a?(String)
 
       case type
       when 'js'

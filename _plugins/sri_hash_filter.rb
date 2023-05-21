@@ -4,7 +4,7 @@ require 'base64'
 module Jekyll
   module SRIHashFilter
     def sri_hash(input)
-      return "" if input.nil?
+      return "" if input.nil? || !input.is_a?(String)
 
       digest = OpenSSL::Digest::SHA384.new
       hash = Base64.strict_encode64(digest.digest(input))

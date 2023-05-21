@@ -1,7 +1,7 @@
 module Jekyll
     module ProcessContentFilter
         def process_content(input)
-            raise "Empty input in content processor" if input.nil?
+            return "" if input.nil? || !input.is_a?(String)
 
             site = @context.registers[:site]
             raise "Site is not set in content processor" if site.nil?
