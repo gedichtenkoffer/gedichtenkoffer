@@ -1,8 +1,3 @@
----
----
-
-{%- capture style_content -%}
-
 * {
     font-family: 'Cantarell', 'Arial', 'Helvetica', sans-serif;
     line-height: 1.5;
@@ -330,6 +325,3 @@ summary,
 details {
     border-radius: 5px;
 }
-{%- endcapture -%}
-
-{{ style_content | minify: 'css' }}

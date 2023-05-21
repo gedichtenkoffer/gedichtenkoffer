@@ -1,48 +1,37 @@
-{%- capture layout_content -%}
 <!DOCTYPE html>
 <html lang="nl">
 
 <head>
   <title>{%- if page.title -%}{{ page.title }}{%- else -%}Gedichtenkoffer{%- endif -%}</title>
+  {%- include_cached meta.html -%}
 
-  {%- capture meta_content -%}
-    {%- include_cached meta.html -%}
-  {%- endcapture -%}
-  {{ meta_content | minify: 'html' }}
+  {%- if page.author -%}
+    <meta name="author" content="{{ page.author }}">
+  {%- else -%}
+    <meta name="author" content="Tekstschrijver onbekend">
+  {%- endif -%}
 </head>
 
 <body>
-  {%- capture sw_content -%}
-    {%- include_cached sw.html -%}
-  {%- endcapture -%}
-  {{ sw_content | minify: 'html' }}
+  {%- include_cached sw.html -%}
 
   <section>
-    {%- capture nav_content -%}
-      {%- include_cached nav.html -%}
-    {%- endcapture -%}
-    {{ nav_content | minify: 'html' }}
+    {%- include_cached nav.html -%}
 
     <article aria-label="gedicht">
       {{ content }}
     </article>
   </section>
 
-  {%- capture share_content -%}
-    {%- include_cached share.html -%}
-  {%- endcapture -%}
-  {{ share_content | minify: 'html' }}
+  {%- include_cached share.html -%}
 
   <footer>
-    {% if page.author %}
+    {%- if page.author -%}
       {{ page.author }}
-    {% else %}
+    {%- else -%}
       Tekstschrijver onbekend
-    {% endif %}
+    {%- endif -%}
   </footer>
 </body>
 
 </html>
-{%- endcapture -%}
-
-{{ layout_content | minify: 'html' }}
