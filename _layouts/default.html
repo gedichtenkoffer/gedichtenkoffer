@@ -1,4 +1,4 @@
-{% capture layout_content %}
+{%- capture layout_content -%}
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -42,6 +42,6 @@
 </body>
 
 </html>
-{% endcapture %}
+{%- endcapture -%}
 
 {{ layout_content | minify: 'html' }}
