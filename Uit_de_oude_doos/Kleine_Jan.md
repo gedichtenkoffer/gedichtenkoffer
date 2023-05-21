@@ -1,10 +1,10 @@
 ---
 map: Uit de oude doos
+layout: doos
+author: OTOS Combinatie
 ---
 
 ## Kleine Jan
-License: OTOS Combinatie
-
 Kleine Jan die zag een doosje \
 thuis bij moeder op de kast  \
 en hij greep toen na een poosje  \

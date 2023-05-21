@@ -1,10 +1,9 @@
 ---
 map: Uit de oude doos
+layout: doos
 ---
 
 ## Opoe
-License: Tekstschrijver onbekend
-
 Volgens opoe's laatste wensen \
 op het sterfbed vastgesteld  \
 werd ze niet begraven \
