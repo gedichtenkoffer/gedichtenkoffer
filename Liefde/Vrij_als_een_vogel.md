@@ -24,4 +24,4 @@ maar nu met vaste honk \
 samen in de avondlucht \
 sloeg het over, die wonderbaarlijke vonk
 
-![vogel](IMG_20200505_185132__01.jpg)
+![vogel](duifjes.png)
