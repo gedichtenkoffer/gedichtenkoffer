@@ -14,22 +14,23 @@ self.addEventListener('install', (evt) => {
             let loaded = 0;
 
             // Iterate over each asset
-            return Promise.all(assets.map((asset) => {
-                return fetch(asset).then((resp) => {
+            return Promise.all(assets.map((asset) => fetch(asset)
+                .then((resp) => {
                     loaded++;
                     return self.clients.matchAll().then((clients) => {
-                        clients.forEach((client) => {
-                            // Send a message to each client
-                            client.postMessage({
-                                command: 'progress',
-                                message: `${loaded}/${total}`
-                            });
-                        });
+                        clients.forEach((client) => client.postMessage({
+                            command: 'progress',
+                            message: `${loaded}/${total}`
+                        })); // Send a message to each client
                         if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
                         return cache.put(asset, resp);
-                    });
-                });
-            }));
+                    })
+                    .catch(() => fetch(asset.replace(/_/g, " ")).then((resp) => {
+                        if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
+                        return cache.put(asset, resp);
+                    }).catch(e => console.log(`Failed to download ${asset}`)));
+                })
+            ));
         })
     );
 
@@ -40,12 +41,10 @@ self.addEventListener('install', (evt) => {
 // Activate event
 self.addEventListener('activate', (evt) => {
     evt.waitUntil(
-        caches.keys().then((keys) => {
-            return Promise.all(keys
-                .filter((key) => key !== name)
-                .map((key) => caches.delete(key))
-            );
-        })
+        caches.keys().then((keys) => Promise.all(keys
+            .filter((key) => key !== name)
+            .map((key) => caches.delete(key))
+        ))
     );
 
     // Makes the service worker take control of the page immediately
@@ -53,10 +52,8 @@ self.addEventListener('activate', (evt) => {
 });
 
 // Fetch events
-self.addEventListener('fetch', (evt) => {
-    evt.respondWith(
-        caches.match(evt.request).then((cacheRes) => {
-            return cacheRes || fetch(evt.request);
-        })
-    );
-});
+self.addEventListener('fetch', (evt) => evt.respondWith(
+    caches.match(evt.request).then((cacheRes) => {
+        return cacheRes || fetch(evt.request);
+    })
+));
