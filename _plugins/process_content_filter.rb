@@ -26,7 +26,7 @@ module Jekyll
                 # Return the original content if it's not a valid Liquid template
                 content
             end
-        rescue StandardError => e
+        rescue Liquid::Error => e
             Jekyll.logger.error "Error processing content: #{e.message}"
             ""
         end
