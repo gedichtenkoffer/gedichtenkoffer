@@ -1,28 +1,23 @@
----
----
+--- 
+--- 
 
-{%- raw -%}
-
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', (function () {
     var buttons = document.getElementsByTagName('button');
 
-    var registerServiceWorker = function () {
+    var registerServiceWorker = (function () {
         if ('serviceWorker' in navigator) {
 
-            {%- endraw -%}
+var swIntegrity = {{ '/sw.js' | source_path | read | process_content | minify: 'js' | sri_hash | jsonify }};
 
-            var swIntegrity = {{ '/sw.js' | source_path | read | process_content | minify: 'js' | sri_hash | jsonify }};
-
-            {%- raw -%}
 
             fetch('/sw.js')
-                .then(function (response) {
+                (function (response) {
                     return response.arrayBuffer();
-                })
-                .then(function (buffer) {
+                })()
+                (function (buffer) {
                     return crypto.subtle.digest('SHA-384', buffer);
-                })
-                .then(function (hash) {
+                })()
+                (function (hash) {
                     var hashArray = Array.from(new Uint8Array(hash));
                     var hexString = hashArray.map(function (b) {
                         return ('0' + b.toString(16)).slice(-2);
@@ -31,16 +26,16 @@ document.addEventListener('DOMContentLoaded', function () {
                         return String.fromCharCode(parseInt(a, 16));
                     }).join(''));
                     return base64String;
-                })
-                .then(function (base64Hash) {
+                })()
+                (function (base64Hash) {
                     if ('sha384-' + base64Hash === swIntegrity) {
                         return navigator.serviceWorker.register('/sw.js');
                     } else {
                         console.log('Expected ' + swIntegrity + ', but got sha384-' + base64Hash);
                         return Promise.reject(new Error('Service Worker integrity check failed'));
                     }
-                })
-                .then(function (reg) {
+                })()
+                (function (reg) {
                     console.log('Service worker registered');
                     navigator.serviceWorker.addEventListener('message', function (e) {
                         if (e.data && e.data.command === 'progress') {
@@ -62,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     for (var i = 0; i < buttons.length; i++) {
                         buttons[i].removeEventListener('click', registerServiceWorker);
                     }
-                })
+                })()
                 .catch(function (err) {
                     return console.log(err);
                 });
@@ -71,7 +66,5 @@ document.addEventListener('DOMContentLoaded', function () {
                 buttons[i].addEventListener('click', registerServiceWorker);
             }
         }
-    }
-});
-
-{%- endraw -%}
+    })();
+}));
