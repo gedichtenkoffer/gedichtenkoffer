@@ -1,16 +1,7 @@
 ---
 ---
 
-{%- capture latest_commit_hash -%}
-  {%- assign latest_commit = site.git_log | first -%}
-  {%- if latest_commit -%}
-    {{ latest_commit.sha }}
-  {%- else -%}
-    Gedichtenkoffer-v1
-  {%- endif -%}
-{%- endcapture -%}
-
-const name = {{ latest_commit_hash | jsonify }};
+const name = {{ site.git_hash | jsonify }};
 
 const assets = {{ '/' | source_path | assets | jsonify }};
 
