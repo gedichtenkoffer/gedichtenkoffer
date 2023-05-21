@@ -1,13 +1,23 @@
 ---
 ---
 
-var staticCacheName = 'site-static-v1';
+{% capture latest_commit_hash %}
+  {% assign latest_commit = site.git_log | first %}
+  {% if latest_commit %}
+    {{ latest_commit.sha }}
+  {% else %}
+    Gedichtenkoffer-v1
+  {% endif %}
+{% endcapture %}
+
+var name = {{ latest_commit_hash | jsonify }}
+
 var assets = {{ '/' | source_path | assets | jsonify }};
 
 // install event
 self.addEventListener('install', function (evt) {
     evt.waitUntil(
-        caches.open(staticCacheName).then(function (cache) {
+        caches.open(name).then(function (cache) {
             console.log('caching shell assets');
             var total = assets.length;
             var loaded = 0;
@@ -40,7 +50,7 @@ self.addEventListener('activate', function (evt) {
         caches.keys().then(function (keys) {
             return Promise.all(keys
                 .filter(function (key) {
-                    return key !== staticCacheName;
+                    return key !== name;
                 })
                 .map(function (key) {
                     return caches.delete(key);
