@@ -20,7 +20,12 @@ module Jekyll
           path = path.gsub(/\.md$/, '.html')
         end
 
+        # Replace all spaces with underscores
         path = path.gsub(' ', '_')
+
+        # Replace multiple consecutive dots with a single dot
+        path = path.gsub(/\.{2,}/, '.')
+
         Jekyll.logger.info "Found asset: #{path}"
         list.push(File.join('/', path))
       end
