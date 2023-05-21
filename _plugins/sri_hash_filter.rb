@@ -3,7 +3,7 @@ require 'base64'
 
 module Jekyll
   module SRIHashFilter
-    def integrity(input)
+    def sri_hash(input)
       # If input is nil, return an empty string
       return "" if input.nil?
 
