@@ -11,7 +11,7 @@ module Jekyll
         next unless path.include?('/')
 
         # Ignore vendor
-        next unless path.include?('vendor')
+        next unless path.include?('/vendor')
 
         # Ignore stuff that starts with . or _
         next if path.start_with?('.', '_')
