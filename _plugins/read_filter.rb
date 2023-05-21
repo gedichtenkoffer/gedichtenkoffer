@@ -1,6 +1,8 @@
 module Jekyll
     module readFilter
         def read(input)
+            return "" if input.nil?
+
             if File.exist?(input)
                 File.read(input)
             else

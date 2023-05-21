@@ -4,7 +4,6 @@ require 'base64'
 module Jekyll
   module SRIHashFilter
     def sri_hash(input)
-      # If input is nil, return an empty string
       return "" if input.nil?
 
       digest = OpenSSL::Digest::SHA384.new
@@ -12,7 +11,7 @@ module Jekyll
       "sha384-#{hash}"
     rescue StandardError => e
       Jekyll.logger.error "Error integriting input: #{e.message}"
-      ""
+      input
     end
   end
 end
