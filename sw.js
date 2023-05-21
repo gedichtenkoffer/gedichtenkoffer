@@ -18,14 +18,18 @@ self.addEventListener('install', (evt) => {
                 .then((resp) => {
                     loaded++;
                     return self.clients.matchAll().then((clients) => {
+                        if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
                         clients.forEach((client) => client.postMessage({
                             command: 'progress',
                             message: `${loaded}/${total}`
                         })); // Send a message to each client
-                        if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
                         return cache.put(asset, resp);
                     })
                     .catch(() => fetch(asset.replace(/_/g, " ")).then((resp) => {
+                        clients.forEach((client) => client.postMessage({
+                            command: 'progress',
+                            message: `${loaded}/${total}`
+                        })); // Send a message to each client
                         if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
                         return cache.put(asset, resp);
                     }).catch(e => console.log(`Failed to download ${asset}`)));
