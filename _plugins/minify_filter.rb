@@ -7,14 +7,15 @@ module Jekyll
   module MinifyFilter
     def minify(input, type)
       return "" if input.nil?
-      
-      # Remove the front matter
-      input = input.sub(/\A---.*?---\s/m, '')
 
       case type
       when 'js'
-        uglifier = Uglifier.new(harmony: true)
-        uglifier.compile(input)
+        if input.include?('{{') && input.include?('}}')
+          input
+        else
+          uglifier = Uglifier.new(harmony: true)
+          uglifier.compile(input)
+        end
       when 'json'
         JSON.generate(JSON.parse(input))
       when 'css'
