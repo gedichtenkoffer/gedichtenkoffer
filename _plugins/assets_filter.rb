@@ -4,8 +4,6 @@ module Jekyll
       list = []
       return list if input.nil?
 
-      list.push('/index.html')
-
       Dir.glob(File.join(input, '**', '*.{md,css,js,png,jpeg,jpg,webp,svg}')) do |file|
         path = file.sub(input, '').lstrip
 
@@ -25,10 +23,11 @@ module Jekyll
 
         # Replace multiple consecutive dots with a single dot
         path = path.gsub(/\.{2,}/, '.')
-
-        Jekyll.logger.info "Found asset: #{path}"
         list.push(File.join('/', path))
       end
+
+      Jekyll.logger.error "No assets found" if list.nil?
+      list.push('/index.html')
 
       list
     end
