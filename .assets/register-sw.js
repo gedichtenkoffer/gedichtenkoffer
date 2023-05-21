@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var registerServiceWorker = function () {
         if ('serviceWorker' in navigator) {
-            var swIntegrity = "{{ '/sw.js' | process | minify: 'js' | integrity }}";
+            var swIntegrity = "{{ '/sw.js' | source_path | read | process | minify: 'js' | sri_hash }}";
 
             fetch('/sw.js')
                 .then(function (response) {
