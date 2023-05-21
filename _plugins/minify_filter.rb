@@ -1,6 +1,7 @@
 require 'uglifier'
 require 'cssminify2'
 require 'htmlcompressor'
+require 'json'
 
 module Jekyll
   module MinifyFilter
@@ -15,6 +16,8 @@ module Jekyll
       when 'js'
         uglifier = Uglifier.new(harmony: true)
         uglifier.compile(input)
+      when 'json'
+        JSON.generate(JSON.parse(input))
       when 'css'
         CSSminify2.compress(input)
       when 'html'
