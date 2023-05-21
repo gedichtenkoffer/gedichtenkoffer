@@ -1,7 +1,7 @@
 module Jekyll
     module ProcessContentFilter
         def process_content(input)
-            return "" if input.nil?
+            raise "Empty input in content processor" if input.nil?
 
             site = @context.registers[:site]
             raise "Site is not set in content processor" if site.nil?
@@ -13,12 +13,9 @@ module Jekyll
             if content.include?('{{') && content.include?('}}')
                 # Create a Liquid template from the content
                 template = Liquid::Template.parse(content)
-
-                # Add 'site' to the Liquid context
-                context = { 'site' => site }.merge(site.site_payload)
             
                 # Render the template with the context data
-                processed_content = template.render(context)
+                processed_content = template.render(@context)
 
                 # Remove the front matter
                 processed_content.gsub(/^---\s*---\s*/, '')
@@ -28,7 +25,7 @@ module Jekyll
             end
         rescue Liquid::Error => e
             Jekyll.logger.error "Error processing content: #{e.message}"
-            ""
+            input
         end
     end
 end
