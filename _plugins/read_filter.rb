@@ -1,7 +1,7 @@
 module Jekyll
   module ReadFilter
     def read(input)
-      return "" if input.nil?
+      return File.nil? if input.nil?
 
       if File.exist?(input)
         File.read(input)
@@ -10,7 +10,7 @@ module Jekyll
       end
     rescue StandardError => e
       Jekyll.logger.error "Error reading file: #{e.message}"
-      input
+      File.nil?
     end
   end
 end
