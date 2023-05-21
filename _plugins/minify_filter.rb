@@ -25,9 +25,6 @@ module Jekyll
       else
         input
       end
-    rescue StandardError => e
-      Jekyll.logger.error "Error minifying input: #{e.message}"
-      input
     end
   end
 end
