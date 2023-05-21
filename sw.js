@@ -1,72 +1,70 @@
 ---
 ---
 
-{% capture latest_commit_hash %}
-  {% assign latest_commit = site.git_log | first %}
-  {% if latest_commit %}
+{%- capture latest_commit_hash -%}
+  {%- assign latest_commit = site.git_log | first -%}
+  {%- if latest_commit -%}
     {{ latest_commit.sha }}
-  {% else %}
+  {%- else -%}
     Gedichtenkoffer-v1
-  {% endif %}
-{% endcapture %}
+  {%- endif -%}
+{%- endcapture -%}
 
-var name = {{ latest_commit_hash | jsonify }}
+const name = {{ latest_commit_hash | jsonify }};
 
-var assets = {{ '/' | source_path | assets | jsonify }};
+const assets = {{ '/' | source_path | assets | jsonify }};
 
-// install event
-self.addEventListener('install', function (evt) {
+// Install event
+self.addEventListener('install', (evt) => {
     evt.waitUntil(
-        caches.open(name).then(function (cache) {
+        caches.open(name).then((cache) => {
             console.log('caching shell assets');
-            var total = assets.length;
-            var loaded = 0;
-            // iterate over each asset
-            return Promise.all(assets.map(function (asset) {
-                return fetch(asset).then(function (resp) {
+            const total = assets.length;
+            let loaded = 0;
+
+            // Iterate over each asset
+            return Promise.all(assets.map((asset) => {
+                return fetch(asset).then((resp) => {
                     loaded++;
-                    return self.clients.matchAll().then(function (clients) {
-                        clients.forEach(function (client) {
-                            // Send a message to each client.
+                    return self.clients.matchAll().then((clients) => {
+                        clients.forEach((client) => {
+                            // Send a message to each client
                             client.postMessage({
                                 command: 'progress',
-                                message: loaded + '/' + total
+                                message: `${loaded}/${total}`
                             });
                         });
-                        if (!resp.ok) throw new Error('HTTP error! status: ' + resp.status);
+                        if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
                         return cache.put(asset, resp);
                     });
                 });
             }));
-        }));
+        })
+    );
 
-    // Forces the waiting service worker to become the active service worker.
+    // Forces the waiting service worker to become the active service worker
     self.skipWaiting();
 });
 
-// activate event
-self.addEventListener('activate', function (evt) {
+// Activate event
+self.addEventListener('activate', (evt) => {
     evt.waitUntil(
-        caches.keys().then(function (keys) {
+        caches.keys().then((keys) => {
             return Promise.all(keys
-                .filter(function (key) {
-                    return key !== name;
-                })
-                .map(function (key) {
-                    return caches.delete(key);
-                })
+                .filter((key) => key !== name)
+                .map((key) => caches.delete(key))
             );
         })
     );
 
-    // Makes the service worker take control of the page immediately.
-    clients.claim();
+    // Makes the service worker take control of the page immediately
+    self.clients.claim();
 });
 
-// fetch events
-self.addEventListener('fetch', function (evt) {
+// Fetch events
+self.addEventListener('fetch', (evt) => {
     evt.respondWith(
-        caches.match(evt.request).then(function (cacheRes) {
+        caches.match(evt.request).then((cacheRes) => {
             return cacheRes || fetch(evt.request);
         })
     );

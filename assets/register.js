@@ -1,70 +1,50 @@
---- 
---- 
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.getElementsByTagName('button');
 
-document.addEventListener('DOMContentLoaded', (function () {
-    var buttons = document.getElementsByTagName('button');
-
-    var registerServiceWorker = (function () {
+    const registerServiceWorker = () => {
         if ('serviceWorker' in navigator) {
-
-var swIntegrity = {{ '/sw.js' | source_path | read | process_content | minify: 'js' | sri_hash | jsonify }};
-
+            const thisScript = document.getElementById('register');
+            const param = thisScript.getAttribute('data-param');
+            console.log('register service worker data params', param);
 
             fetch('/sw.js')
-                (function (response) {
-                    return response.arrayBuffer();
-                })()
-                (function (buffer) {
-                    return crypto.subtle.digest('SHA-384', buffer);
-                })()
-                (function (hash) {
-                    var hashArray = Array.from(new Uint8Array(hash));
-                    var hexString = hashArray.map(function (b) {
-                        return ('0' + b.toString(16)).slice(-2);
-                    }).join('');
-                    var base64String = btoa(hexString.match(/\w{2}/g).map(function (a) {
-                        return String.fromCharCode(parseInt(a, 16));
-                    }).join(''));
+                .then(response => response.arrayBuffer())
+                .then(buffer => crypto.subtle.digest('SHA-384', buffer))
+                .then(hash => {
+                    const hashArray = Array.from(new Uint8Array(hash));
+                    const hexString = hashArray.map(b => ('0' + b.toString(16)).slice(-2)).join('');
+                    const base64String = btoa(hexString.match(/\w{2}/g).map(a => String.fromCharCode(parseInt(a, 16))).join(''));
                     return base64String;
-                })()
-                (function (base64Hash) {
-                    if ('sha384-' + base64Hash === swIntegrity) {
+                })
+                .then(base64Hash => {
+                    if ('sha384-' + base64Hash === param) {
                         return navigator.serviceWorker.register('/sw.js');
                     } else {
-                        console.log('Expected ' + swIntegrity + ', but got sha384-' + base64Hash);
+                        console.log(`Expected ${param}, but got sha384-${base64Hash}`);
                         return Promise.reject(new Error('Service Worker integrity check failed'));
                     }
-                })()
-                (function (reg) {
+                })
+                .then(reg => {
                     console.log('Service worker registered');
-                    navigator.serviceWorker.addEventListener('message', function (e) {
+                    navigator.serviceWorker.addEventListener('message', e => {
                         if (e.data && e.data.command === 'progress') {
-                            var progress = document.getElementById('sw');
-                            var parts = e.data.message.split('/');
-                            var loaded = Number(parts[0]);
-                            var total = Number(parts[1]);
+                            const progress = document.getElementById('sw');
+                            const parts = e.data.message.split('/');
+                            const loaded = Number(parts[0]);
+                            const total = Number(parts[1]);
                             progress.value = (loaded / total) * 100;
-                        }
 
-                        // Hide the progress bar when progress is at 0%
-                        if (value === 0) {
-                            progress.style.display = 'none';
-                        } else {
-                            progress.style.display = '';
+                            // Hide the progress bar when progress is at 0%
+                            progress.style.display = progress.value === 0 ? 'none' : '';
                         }
                     });
-                    // remove event listeners
-                    for (var i = 0; i < buttons.length; i++) {
-                        buttons[i].removeEventListener('click', registerServiceWorker);
-                    }
-                })()
-                .catch(function (err) {
-                    return console.log(err);
-                });
 
-            for (var i = 0; i < buttons.length; i++) {
-                buttons[i].addEventListener('click', registerServiceWorker);
-            }
+                    // remove event listeners
+                    buttons.forEach(button => button.removeEventListener('click', registerServiceWorker));
+                })
+                .catch(err => console.log(err));
+
+            buttons.forEach(button => button.addEventListener('click', registerServiceWorker));
         }
-    })();
-}));
+    }
+});
