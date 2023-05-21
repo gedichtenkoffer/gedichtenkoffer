@@ -1,4 +1,4 @@
-name: Deploy Jekyll site to Pages
+name: Gedichtenkoffer Up-to-date
 
 on:
   push:
