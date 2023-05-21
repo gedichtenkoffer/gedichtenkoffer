@@ -1,10 +1,9 @@
 ---
 map: Uit de oude doos
+layout: doos
 ---
 
 ## De balade van Aris Hop
-License: Tekstschrijver onbekend
-
 Aanhoort het noodlot fel en wreed \
 van een kind dat op zijn nagels beet \
 een kind dat met zijn eigen tanden \

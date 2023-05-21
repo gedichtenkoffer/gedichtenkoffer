@@ -1,10 +1,9 @@
 ---
 map: Uit de oude doos
+layout: doos
 ---
 
 ## Verf en poeder
-License: Tekstschrijver onbekend
-
 "Vader," vroeg er laatst een jongen \
 die eens mee de trein in mocht  \
 "Heeft die juffrouw nieuwe lippen \
