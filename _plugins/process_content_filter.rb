@@ -15,7 +15,7 @@ module Jekyll
                 template = Liquid::Template.parse(content)
 
                 # Add 'site' to the Liquid context
-                context = { 'site' => @site }.merge(@site.site_payload)
+                context = { 'site' => site }.merge(site.site_payload)
             
                 # Render the template with the context data
                 processed_content = template.render(context)
