@@ -10,6 +10,9 @@ module Jekyll
         # Ignore files in the root directory
         next unless path.include?('/')
 
+        # Ignore vendor
+        next unless path.include?('vendor')
+
         # Ignore stuff that starts with . or _
         next if path.start_with?('.', '_')
 
