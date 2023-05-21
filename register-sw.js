@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.getElementsByTagName('button');
-
     const registerServiceWorker = () => {
         if ('serviceWorker' in navigator) {
+            const buttons = document.getElementsByTagName('button');
             const thisScript = document.getElementById('register-sw');
             const param = thisScript.getAttribute('data-param');
             console.log('register-sw service worker data params', param);
