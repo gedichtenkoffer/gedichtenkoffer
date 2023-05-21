@@ -1,4 +1,4 @@
 <progress id="sw" value="0" max="100"> 0% </progress>
-<script id="register" type="text/javascript" src="{{ '/assets/register.js' | relative_url }}"
-    data-param="{{ '/sw.js' | source_path | read | process_content | minify: 'js' | sri_hash | jsonify }}"
-    integrity="{{ '/assets/register.js' | source_path | read | minify: 'js' | sri_hash }}"></script>
+<script id="register-sw" type="text/javascript" src="{{ '/register-sw.js' | relative_url }}"
+    data-param="{{ '/sw.js' | source_path | read | process_content | sri_hash | jsonify }}"
+    integrity="{{ '/register-sw.js' | source_path | read | sri_hash }}"></script>

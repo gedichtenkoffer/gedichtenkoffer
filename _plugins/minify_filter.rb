@@ -10,7 +10,7 @@ module Jekyll
 
       case type
       when 'js'
-        if input.include?('{{') && input.include?('}}')
+        if input.include?('{{') || input.include?('}}') || input.include?('serviceWorker')
           input
         else
           uglifier = Uglifier.new(harmony: true)
