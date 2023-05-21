@@ -1,12 +1,19 @@
 ---
 ---
 
+{%- raw -%}
+
 document.addEventListener('DOMContentLoaded', function () {
     var buttons = document.getElementsByTagName('button');
 
     var registerServiceWorker = function () {
         if ('serviceWorker' in navigator) {
+
+            {%- endraw -%}
+
             var swIntegrity = {{ '/sw.js' | source_path | read | process_content | minify: 'js' | sri_hash | jsonify }};
+
+            {%- raw -%}
 
             fetch('/sw.js')
                 .then(function (response) {
@@ -66,3 +73,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+{%- endraw -%}
