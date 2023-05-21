@@ -1,2 +1,2 @@
 <progress id="sw" value="0" max="100"> 0% </progress>
-<script type="text/javascript" src="{{ '/js/register-sw.js' | relative_url }}" sri_tag></script>
+<script type="text/javascript" src="{{ '/js/register-sw.js' | relative_url }}" integrity="{{ '/.assets/register-sw.js' | absolute_url | read | minify: 'js' | sri_hash }}"></script>

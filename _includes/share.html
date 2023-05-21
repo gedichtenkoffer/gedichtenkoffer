@@ -1,4 +1,4 @@
 <section>
     <button id="share" class="primary">Share ↗️</button>
-    <script type="text/javascript" src="{{ '/js/share.js' | relative_url }}" sri_tag></script>
+    <script type="text/javascript" src="{{ '/js/share.js' | relative_url }}" integrity="{{ '/.assets/share.js' | absolute_url | read | minify: 'js' | sri_hash }}"></script>
 </section>
