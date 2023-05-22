@@ -4,10 +4,10 @@
 <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}?v={{ site.git_hash }}" integrity="{{ '/assets/main.css' | source_path | read | minify: 'css' | sri_hash }}" />
 <link rel="manifest" href="{{ '/assets/manifest.json' | relative_url }}?v={{ site.git_hash }}" integrity="{{ '/assets/manifest.json' | source_path | read | minify: 'json' | sri_hash }}" />
 <meta charset="utf-8" />
-<meta http-equiv="Cache-Control" content="public, max-age=63072000, immutable" />
+<meta http-equiv="Cache-Control" content="public, max-age=604800, must-revalidate" />
 <meta http-equiv="Content-Security-Policy"
     content="default-src 'none'; style-src 'self'; script-src 'self'; connect-src 'self'; manifest-src 'self'; img-src 'self' https://github.com/gedichtenkoffer/gedichtenkoffer/actions/workflows/jekyll.yml/badge.svg;">
-<meta http-equiv="Expires" content="63072000" />
+<meta http-equiv="Expires" content="604800" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="Description"
