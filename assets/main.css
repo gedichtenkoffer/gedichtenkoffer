@@ -74,7 +74,8 @@ main {
     }
 
     nav {
-        width: 30%;
+        width: 40%;
+        max-width: 20em;
     }
 
     main {
@@ -140,7 +141,6 @@ button {
     cursor: pointer;
     font-weight: bold;
     text-align: center;
-    margin: auto;
     padding: 0.5em;
     border: 1px solid var(--border);
     color: var(--secondary);
