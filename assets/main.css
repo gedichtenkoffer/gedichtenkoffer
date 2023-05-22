@@ -99,6 +99,10 @@ footer {
     clear: both;
 }
 
+nav h2 {
+    font-size: 1em;
+}
+
 nav ul,
 nav ul li ul {
     list-style-type: none;
