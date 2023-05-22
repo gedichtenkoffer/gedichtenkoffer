@@ -10,30 +10,18 @@ self.addEventListener('install', (evt) => {
     evt.waitUntil(
         caches.open(name).then((cache) => {
             console.log('caching shell assets');
-            const total = assets.length;
-            let loaded = 0;
 
             // Iterate over each asset
             return Promise.all(assets.map((asset) => fetch(asset)
-                .then((resp) => {
-                    loaded++;
-                    return self.clients.matchAll().then((clients) => {
+                .then((resp) => self.clients.matchAll().then(() => {
                         if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
-                        clients.forEach((client) => client.postMessage({
-                            command: 'progress',
-                            message: `${loaded}/${total}`
-                        })); // Send a message to each client
                         return cache.put(asset, resp);
                     })
                     .catch(() => fetch(asset.replace(/_/g, " ")).then((resp) => {
-                        clients.forEach((client) => client.postMessage({
-                            command: 'progress',
-                            message: `${loaded}/${total}`
-                        })); // Send a message to each client
                         if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
                         return cache.put(asset, resp);
-                    }).catch(e => console.log(`Failed to download ${asset}`)));
-                })
+                    }).catch(e => console.log(`Failed to download ${asset}`)))
+                )
             ));
         })
     );

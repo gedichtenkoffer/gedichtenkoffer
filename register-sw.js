@@ -35,22 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
                 .then(() => {
                     console.log('Service worker registered');
-                    navigator.serviceWorker.addEventListener('message', (e) => {
-                        if (e.data && e.data.command === 'progress') {
-                            const progress = document.getElementById('sw-progress');
-                            const parts = e.data.message.split('/');
-                            const loaded = Number(parts[0]);
-                            const total = Number(parts[1]);
-                            progress.value = (loaded / total) * 100;
-                        }
 
-                        // Hide the progress bar when progress is at 0%
-                        if (value === 0) {
-                            progress.style.display = 'none';
-                        } else {
-                            progress.style.display = '';
-                        }
-                    });
                     // remove event listeners
                     for (let i = 0; i < buttons.length; i++) {
                         buttons[i].removeEventListener('click', registerServiceWorker);
