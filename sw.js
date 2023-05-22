@@ -3,7 +3,15 @@
 
 const name = {{ site.git_hash | jsonify }};
 
-const assets = {{ '/' | source_path | assets | jsonify }};
+{%- assign urls = "" | split: "" -%}
+{%- for page in site.pages -%}
+  {%- if page.title -%}
+    {%- assign url = page.url | absolute_url -%}
+    {%- assign urls = urls | push: url -%}
+  {%- endif -%}
+{%- endfor -%}
+
+const assets = {{ urls | jsonify }};
 
 // Install event
 self.addEventListener('install', (evt) => {
