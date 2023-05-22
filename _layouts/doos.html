@@ -6,30 +6,33 @@
   {%- include_cached meta.html -%}
 
   {%- if page.author -%}
-    <meta name="author" content="{{ page.author }}">
+  <meta name="author" content="{{ page.author }}">
   {%- else -%}
-    <meta name="author" content="Tekstschrijver onbekend">
+  <meta name="author" content="Tekstschrijver onbekend">
   {%- endif -%}
 </head>
 
 <body>
-  <section>
-    {%- include_cached nav.html -%}
-
-    <article aria-label="gedicht">
+  <header>
+    <h1>{%- if page.title -%}{{ page.title }}{%- else -%}Gedichtenkoffer{%- endif -%}</h1>
+  </header>
+  {%- include_cached nav.html -%}
+  <main>
+    <section>
       {{ content }}
-    </article>
-  </section>
-
-  {%- include_cached share.html -%}
-
+    </section>
+    {%- include_cached share.html -%}
+  </main>
   <footer>
     {%- if page.author -%}
-      {{ page.author }}
+    {{ page.author }}
     {%- else -%}
-      Tekstschrijver onbekend
+    Tekstschrijver onbekend
     {%- endif -%}
   </footer>
+
+  <script type="text/javascript" src="{{ '/assets/menu.js' | relative_url }}?v={{ site.git_hash }}"
+    integrity="{{ '/assets/menu.js' | source_path | read | minify: 'js' | sri_hash }}"></script>
 </body>
 
 </html>

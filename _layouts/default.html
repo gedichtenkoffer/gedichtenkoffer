@@ -8,19 +8,16 @@
 </head>
 
 <body>
-  <section>
-    {%- include_cached nav.html -%}
-
-    <article aria-label="gedicht">
+  {%- include_cached nav.html -%}
+  <main>
+    <section>
       {{ content }}
-    </article>
-  </section>
-
-  {%- include_cached share.html -%}
-
+    </section>
+    {%- include_cached share.html -%}
+  </main>
   <footer>
     {%- capture footer_content -%}
-     {%- include_cached footer.md -%}
+    {%- include_cached footer.md -%}
     {%- endcapture -%}
     {{ footer_content | markdownify | imagenify }}
   </footer>

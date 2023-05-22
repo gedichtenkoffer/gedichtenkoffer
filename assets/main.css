@@ -1,297 +1,165 @@
-* {
-    font-family: 'Cantarell', 'Arial', 'Helvetica', sans-serif;
-    line-height: 1.5;
-}
-
 :root {
-    --bg-color: #EDEDED;
-    --text-color: #1A1A1A;
-    --primary-color: #4A90D9;
-    --secondary-color: #FFFFFF;
-    --border-color: #CCCCCC;
-    --link-color: #204a87;
+    --background: #EDEDED;
+    --primary: #3584E4;
+    --secondary: #FFFFFF;
+    --text: #2E3436;
+    --border: #D3D7CF;
+    --hovered: #C4A000;
+    --insensitivity: #555753;
+    --danger: #A40000;
+    --success: #4E9A06;
+    --warning: #CE5C00;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg-color: #2E3436;
-        --text-color: #D3D7CF;
-        --primary-color: #3465A4;
-        --secondary-color: #555753;
-        --border-color: #888A85;
-        --link-color: #729fcf;
+        --background: #2E3436;
+        --primary: #4A90D9;
+        --secondary: #555753;
+        --text: #D3D7CF;
+        --border: #555753;
+        --hovered: #888A85;
+        --insensitivity: #CCCCCC;
+        --danger: #EF2929;
+        --success: #8AE234;
+        --warning: #FCE94F;
     }
 }
 
-article,
-section {
-    margin: 0 auto;
+* {
+    font-family: 'Cantarell', 'Arial', 'Helvetica', sans-serif;
+    line-height: 1.5;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 0.5em;
+}
+
+html,
+body {
+    background-color: var(--background);
+    color: var(--text);
+    margin: 0;
+}
+
+body {
     padding: 1em;
 }
 
-footer,
-article {
-    text-align: center;
-    max-width: 50em;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.noscript,
-#share,
-#toggle {
-    display: none;
+main {
+    border: 1px solid var(--border);
+    background-color: var(--secondary);
 }
 
 @media screen and (max-width: 800px) {
-
-    nav,
-    nav a,
-    nav details,
-    nav ui {
-        width: 100%;
+    img {
+        max-width: -webkit-fill-available;
     }
 
-    #menu {
-        display: none;
-    }
-
-    #share,
-    #toggle {
-        text-align: center;
-        width: 100%;
-        margin: 1em auto;
-        overflow: hidden;
-    }
-
-    #toggle {
+    main,
+    nav {
         display: block;
+        width: 100%;
     }
 }
 
 @media screen and (min-width: 800px) {
+    body {
+        padding: 3em;
+    }
 
-    article,
+    main,
     nav {
         float: left;
+        padding: 1em;
+        display: block;
     }
 
-    nav,
-    nav a,
-    nav details,
-    nav ui {
-        width: 15em;
+    nav {
+        width: 30%;
     }
 
-    #menu {
-        padding-right: 1em;
+    main {
+        width: 60%;
     }
 
-    section {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        max-width: fit-content;
-    }
-
-    section::after {
-        content: "";
-        display: table;
-        clear: both;
+    img {
+        padding: 1em;
+        max-width: 95%;
     }
 }
 
-article {
-    border: 1px solid var(--border-color);
-}
-
-body,
-article,
-button,
 img,
-nav a,
+section,
+footer {
+    display: block;
+    margin: 1em;
+}
+
+footer {
+    clear: both;
+}
+
 nav ul,
-nav ul li,
-summary {
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
-
-article,
-nav ul,
-details div {
-    border: 1px solid var(--border-color);
-    background-color: var(--secondary-color);
-}
-
-.primary,
-nav a:hover,
-nav a:focus,
-nav ul li:hover,
-nav ul li:focus,
-summary:hover,
-summary:focus {
-    background-color: var(--primary-color);
-}
-
-.primary,
-nav a:hover,
-nav a:focus nav ul li:hover,
-nav ul li:focus {
-    color: var(--secondary-color);
-}
-
-@media (prefers-color-scheme: dark) {
-    .primary {
-        color: var(--text-color);
-    }
-}
-
-.primary:hover,
-.secondary {
-    background-color: var(--secondary-color);
-}
-
-.secondary:hover,
-nav a:hover,
-nav ul li a:hover {
-    background-color: var(--primary-color);
-}
-
-a,
-button {
-    cursor: pointer;
-}
-
-.secondary,
-nav a,
-nav ul li a,
-details,
-summary {
-    color: var(--text-color);
-}
-
-a,
-img {
-    transition: color 0.3s ease-in-out;
-}
-
-a {
-    color: var(--link-color);
-    text-decoration: none;
-}
-
-a:hover,
-a:active {
-    color: var(--primary-color);
-}
-
-a:focus {
-    outline: 2px solid var(--primary-color);
-}
-
-img {
-    max-width: 100%;
-}
-
-nav a,
-nav ul {
-    box-sizing: border-box;
+nav ul li ul {
     list-style-type: none;
-    margin: 0;
 }
 
-nav ul {
-    padding: 0;
+a.toggle-submenu::before {
+    content: '>';
+    margin-right: 1em;
 }
 
-nav,
-button {
-    margin: 1em auto;
-    min-width: 10em;
+a.toggle-submenu.active::before {
+    content: 'v';
+    margin-right: 1em;
 }
 
-button,
-summary,
-nav a {
-    padding: 0.5em;
-    display: block;
-}
-
-nav a,
-nav ul li {
-    border-bottom: 1px solid var(--border-color);
-}
-
-nav a,
-nav ul li:last-child {
-    border-bottom: none;
-}
-
-nav a:hover,
-nav a:focus,
-nav ul li:hover,
-nav ul li:focus {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
-
-.primary:hover,
-.primary:active,
-.primary:focus,
-.secondary:hover,
-.secondary:active,
-.secondary:focus,
-nav a:hover,
-nav a:focus,
-nav a:active,
-nav ul li a,
-nav ul li a:hover,
-nav ul li a:focus,
-nav ul li a:active {
-    color: var(--text-color);
-    text-decoration: none;
-    display: block;
-}
-
-details {
-    background-color: transparent;
-    border: none;
-    margin-bottom: 0;
-    padding: 0;
-}
-
-details[open] {
-    background-color: var(--secondary-color);
-}
-
-button,
-summary {
-    border: none;
-    cursor: pointer;
-    list-style: none;
-    outline: none;
-}
-
-summary::-webkit-details-marker {
+nav ul li ul {
     display: none;
 }
 
-details[open] summary:before {
-    transform: rotate(90deg);
+nav ul li ul.show {
+    display: block;
 }
 
-article,
-button,
-nav a,
-nav ul li,
-summary,
-details {
-    border-radius: 5px;
+a {
+    color: var(--text);
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    margin: 0.5em;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: var(--primary);
+}
+
+button {
+    width: 10em;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    padding: 0.5em;
+    border: 1px solid var(--border);
+    color: var(--secondary);
+    background-color: var(--primary);
+}
+
+button:hover,
+button:active,
+button:focus {
+    color: var(--primary);
+    background-color: var(--secondary);
+}
+
+footer {
+    padding: 1em;
+}
+
+footer,
+footer * {
+    text-align: center;
+    margin: auto;
 }
