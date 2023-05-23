@@ -51,6 +51,8 @@ main {
 @media screen and (max-width: 800px) {
     img {
         max-width: -webkit-fill-available;
+        max-width: -moz-available;
+        max-width: fill-available;
     }
 
     main,
