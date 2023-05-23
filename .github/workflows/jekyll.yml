@@ -1,6 +1,8 @@
 name: Gedichtenkoffer Up-to-date
 
 on:
+  schedule:
+    - cron: '0 0 1 1 *'
   push:
     branches:
       - main
