@@ -58,6 +58,21 @@ main {
         display: block;
         width: 100%;
     }
+
+    nav h2:hover,
+    nav h2:active,
+    nav h2:focus {
+        color: var(--primary);
+    }
+
+    @media (prefers-color-scheme: dark) {
+
+        nav h2:hover,
+        nav h2:active,
+        nav h2:focus {
+            color: #3584E4;
+        }
+    }
 }
 
 @media screen and (min-width: 800px) {
@@ -169,6 +184,18 @@ a:hover,
 a:active,
 a:focus {
     color: var(--primary);
+}
+
+@media (prefers-color-scheme: dark) {
+
+    nav h3:hover,
+    nav h3:active,
+    nav h3:focus,
+    a:hover,
+    a:active,
+    a:focus {
+        color: #3584E4;
+    }
 }
 
 button {
