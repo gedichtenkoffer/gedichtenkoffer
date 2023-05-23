@@ -119,7 +119,8 @@ footer {
     clear: both;
 }
 
-nav h2 {
+nav h2,
+nav h3 {
     font-size: 1em;
 }
 
@@ -128,12 +129,12 @@ nav ul li ul {
     list-style-type: none;
 }
 
-a.toggle-submenu::before {
+.toggle-submenu::before {
     content: '>';
     margin-right: 1em;
 }
 
-a.toggle-submenu.active::before {
+.toggle-submenu.active::before {
     content: 'v';
     margin-right: 1em;
 }
@@ -146,6 +147,7 @@ nav ul li ul.show {
     display: block;
 }
 
+nav h3,
 a {
     color: var(--text);
     text-decoration: none;

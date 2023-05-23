@@ -14,9 +14,9 @@
     {%- assign unique_map_names = filtered_pages | map: 'map' | uniq -%}
     {%- for map_name in unique_map_names -%}
     <li>
-      <a class="toggle-submenu" aria-label="{{ map_name }}">
+      <h3 class="toggle-submenu" aria-label="{{ map_name }}">
         {{ map_name }}
-      </a>
+      </h3>
       <ul>
         {%- for page in filtered_pages -%}
         {%- if page.map == map_name -%}

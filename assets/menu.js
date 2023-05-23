@@ -1,4 +1,4 @@
-document.querySelectorAll('a.toggle-submenu').forEach((a) => {
+document.querySelectorAll('.toggle-submenu').forEach((a) => {
     a.addEventListener('click', (e) => {
         e.preventDefault();
         let submenu = e.target.nextElementSibling;
