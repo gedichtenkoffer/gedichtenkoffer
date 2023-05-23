@@ -116,6 +116,13 @@ footer {
 
 footer {
     clear: both;
+    padding: 1em;
+}
+
+footer,
+footer * {
+    text-align: center;
+    margin: 1em auto;
 }
 
 nav h2,
@@ -187,14 +194,4 @@ button:focus {
     button {
         color: var(--text);
     }
-}
-
-footer {
-    padding: 1em;
-}
-
-footer,
-footer * {
-    text-align: center;
-    margin: auto;
 }
