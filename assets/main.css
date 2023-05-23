@@ -1,6 +1,6 @@
 :root {
     --background: #EDEDED;
-    --primary: #3584E4;
+    --primary: #1976D2;
     --secondary: #FFFFFF;
     --text: #2E3436;
     --border: #D3D7CF;
@@ -14,7 +14,6 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #2E3436;
-        --primary: #4A90D9;
         --secondary: #555753;
         --text: #D3D7CF;
         --border: #555753;
@@ -181,6 +180,13 @@ button:active,
 button:focus {
     color: var(--text);
     background-color: var(--secondary);
+    border: 1px solid var(--primary);
+}
+
+@media (prefers-color-scheme: dark) {
+    button {
+        color: var(--text);
+    }
 }
 
 footer {
