@@ -1,5 +1,7 @@
 safe: false
 
+url: "https://gedichtenkoffer.nl"
+
 plugins:
   - jekyll-default-layout
   - jekyll-include-cache
