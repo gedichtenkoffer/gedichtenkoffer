@@ -59,6 +59,14 @@ main {
         width: 100%;
     }
 
+    nav ul {
+        display: none;
+    }
+
+    nav h2 {
+        cursor: pointer;
+    }
+
     nav h2:hover,
     nav h2:active,
     nav h2:focus {
