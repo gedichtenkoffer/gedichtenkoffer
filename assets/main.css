@@ -156,6 +156,9 @@ a {
     margin: 0.5em;
 }
 
+nav h3:hover,
+nav h3:active,
+nav h3:focus,
 a:hover,
 a:active,
 a:focus {
@@ -176,7 +179,7 @@ button {
 button:hover,
 button:active,
 button:focus {
-    color: var(--primary);
+    color: var(--text);
     background-color: var(--secondary);
 }
 
