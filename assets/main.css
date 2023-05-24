@@ -134,6 +134,11 @@ main {
     }
 }
 
+section:has(image),
+section:has(img) {
+    text-align: center;
+}
+
 img,
 section,
 footer {
