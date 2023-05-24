@@ -5,11 +5,6 @@
     --secondary: #FFFFFF;
     --text: #2E3436;
     --border: #D3D7CF;
-    --hovered: #C4A000;
-    --insensitivity: #555753;
-    --danger: #A40000;
-    --success: #4E9A06;
-    --warning: #CE5C00;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,11 +13,6 @@
         --secondary: #555753;
         --text: #D3D7CF;
         --border: #555753;
-        --hovered: #888A85;
-        --insensitivity: #CCCCCC;
-        --danger: #EF2929;
-        --success: #8AE234;
-        --warning: #FCE94F;
     }
 }
 
