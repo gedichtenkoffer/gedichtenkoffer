@@ -1,6 +1,7 @@
 :root {
     --background: #EDEDED;
     --primary: #1976D2;
+    --light-primary: #3584E4;
     --secondary: #FFFFFF;
     --text: #2E3436;
     --border: #D3D7CF;
@@ -208,7 +209,7 @@ a:focus {
     a:hover,
     a:active,
     a:focus {
-        color: #3584E4;
+        color: var(--light-primary);
     }
 }
 
