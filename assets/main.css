@@ -50,6 +50,8 @@ main {
     nav {
         display: block;
         width: 100%;
+        max-width: 500px;
+        margin: auto;
     }
 
     nav ul {
@@ -86,10 +88,15 @@ main {
     nav {
         float: left;
         display: block;
+        max-width: none;
     }
 
     nav ul {
         display: block;
+    }
+
+    section {
+        text-align: center;
     }
 }
 
@@ -201,6 +208,10 @@ a:focus {
     a:focus {
         color: var(--light-primary);
     }
+}
+
+section button {
+    margin: 0 auto;
 }
 
 button {
