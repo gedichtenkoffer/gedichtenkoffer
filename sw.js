@@ -1,52 +1,59 @@
-const staticCacheName = 'site-static-v1';
+---
+---
 
-// install event
-self.addEventListener('install', evt => {
+const name = {{ site.git_hash | jsonify }};
+
+{%- assign urls = "" | split: "" -%}
+{%- for page in site.pages -%}
+  {%- if page.title -%}
+    {%- assign url = page.url | absolute_url -%}
+    {%- assign urls = urls | push: url -%}
+  {%- endif -%}
+{%- endfor -%}
+
+const assets = {{ urls | jsonify }};
+
+// Install event
+self.addEventListener('install', (evt) => {
     evt.waitUntil(
-        fetch('/assets.json').then(resp => resp.json()).then(assets => {
-            caches.open(staticCacheName).then(cache => {
-                console.log('caching shell assets');
-                let total = assets.length;
-                let loaded = 0;
-                // iterate over each asset
-                return Promise.all(assets.map(asset => {
-                    return fetch(asset).then(resp => {
-                        loaded++;
-                        self.clients.matchAll().then(clients => {
-                            clients.forEach(client => {
-                                // Send a message to each client.
-                                client.postMessage({
-                                    command: 'progress',
-                                    message: `${loaded}/${total}`
-                                });
-                            });
-                        });
+        caches.open(name).then((cache) => {
+            console.log('caching shell assets');
+
+            // Iterate over each asset
+            return Promise.all(assets.map((asset) => fetch(asset)
+                .then((resp) => self.clients.matchAll().then(() => {
                         if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
                         return cache.put(asset, resp);
-                    });
-                }));
-            }).catch(err => console.log(`Error caching assets: ${err}`));
+                    })
+                    .catch(() => fetch(asset.replace(/_/g, " ")).then((resp) => {
+                        if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
+                        return cache.put(asset, resp);
+                    }).catch(e => console.log(`Failed to download ${asset}`)))
+                )
+            ));
         })
     );
+
+    // Forces the waiting service worker to become the active service worker
+    self.skipWaiting();
 });
 
-// activate event
-self.addEventListener('activate', evt => {
+// Activate event
+self.addEventListener('activate', (evt) => {
     evt.waitUntil(
-        caches.keys().then(keys => {
-            return Promise.all(keys
-                .filter(key => key !== staticCacheName)
-                .map(key => caches.delete(key))
-            );
-        })
+        caches.keys().then((keys) => Promise.all(keys
+            .filter((key) => key !== name)
+            .map((key) => caches.delete(key))
+        ))
     );
+
+    // Makes the service worker take control of the page immediately
+    self.clients.claim();
 });
 
-// fetch events
-self.addEventListener('fetch', evt => {
-    evt.respondWith(
-        caches.match(evt.request).then(cacheRes => {
-            return cacheRes || fetch(evt.request);
-        })
-    );
-});
+// Fetch events
+self.addEventListener('fetch', (evt) => evt.respondWith(
+    caches.match(evt.request).then((cacheRes) => {
+        return cacheRes || fetch(evt.request);
+    })
+));

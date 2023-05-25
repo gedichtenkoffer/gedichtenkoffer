@@ -4,7 +4,12 @@
 <head>
   <title>{%- if page.title -%}{{ page.title }}{%- else -%}Gedichtenkoffer{%- endif -%}</title>
   {%- include_cached meta.html -%}
-  <meta name="author" content="Sonja Zuijdervelt">
+
+  {%- if page.author -%}
+  <meta name="author" content="{{ page.author }}">
+  {%- else -%}
+  <meta name="author" content="Tekstschrijver onbekend">
+  {%- endif -%}
 </head>
 
 <body>
@@ -16,10 +21,11 @@
     {%- include_cached share.html -%}
   </main>
   <footer>
-    {%- capture footer_content -%}
-    {%- include_cached footer.md -%}
-    {%- endcapture -%}
-    {{ footer_content | markdownify | imagenify }}
+    {%- if page.author -%}
+    {{ page.author }}
+    {%- else -%}
+    Tekstschrijver onbekend
+    {%- endif -%}
   </footer>
 </body>
 
