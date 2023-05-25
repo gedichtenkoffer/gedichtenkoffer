@@ -45,4 +45,4 @@ en is ziender oog afgenomen  \
 van de honger omgekomen 
 
 Heel duidelijk is de moraal van dit verhaal \
-wordt nooit uw eigen kanibaal
+word nooit uw eigen kanibaal

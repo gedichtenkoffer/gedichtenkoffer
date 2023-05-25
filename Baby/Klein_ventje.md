@@ -19,3 +19,5 @@ Het kereltje zal je nooit gaan vervelen \
 en weet met zijn lachje alle harten te stelen \
 Eerst alleen, dan met z’n twee, nu met drie \
 en tussen hen in een bijzondere chemie
+
+![geboorte](geboorte.png)
