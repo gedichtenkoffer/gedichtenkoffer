@@ -1,6 +1,7 @@
 ---
 map: Uit de oude doos
 layout: doos
+author: null
 ---
 
 ## Verf en poeder
