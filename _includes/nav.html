@@ -4,6 +4,12 @@
 
 <nav>
   <h2>☰ Menu</h2>
+
+  <form>
+    <input type="text" placeholder="Zoeken...">
+    <input type="submit" value="Zoek">
+  </form>
+
   <ul>
     <li>
       <a href="{{ '/' | relative_url }}" aria-label="Over mij">Over mij</a>
@@ -30,3 +36,5 @@
 </nav>
 <script type="text/javascript" src="{{ '/assets/menu.js' | relative_url }}?v={{ site.git_hash }}"
   integrity="{{ '/assets/menu.js' | source_path | read | minify: 'js' | sri_hash }}"></script>
+<script type="text/javascript" src="{{ '/assets/search.js' | relative_url }}?v={{ site.git_hash }}"
+  integrity="{{ '/assets/search.js' | source_path | read | minify: 'js' | sri_hash }}"></script>
