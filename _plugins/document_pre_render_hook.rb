@@ -13,12 +13,20 @@ module Jekyll
       end
 
       def convert(content)
-        content.gsub(/\!\[(.*?)\]\((.*?)\)/, "{%- picture jpt-webp \\2 alt='\\1' -%}")
+        content.gsub(/\!\[(.*?)\]\((.*?)\)/) do
+          alt_text = $1
+          url = $2.gsub('%20', ' ')
+          "{%- picture jpt-webp \"#{url}\" alt #{alt_text} -%}"
+        end
       end
     end
   end
 end
 
 Jekyll::Hooks.register [:pages, :posts, :documents], :pre_render do |doc|
-  doc.content = doc.content.gsub(/\!\[(.*?)\]\((.*?)\)/, "{%- picture jpt-webp \\2 --alt '\\1' -%}")
+  doc.content = doc.content.gsub(/\!\[(.*?)\]\((.*?)\)/) do
+    alt_text = $1
+    url = $2.gsub('%20', ' ')
+    "{%- picture jpt-webp \"#{url}\" --alt #{alt_text} -%}"
+  end
 end
