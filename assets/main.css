@@ -157,6 +157,20 @@ footer * {
     margin: 1em auto;
 }
 
+nav input:hover,
+nav input:active,
+nav input:focus,
+nav input {
+    color: var(--text);
+    text-decoration: none;
+    cursor: text;
+    display: block;
+    margin: 0.5em;
+    background: transparent;
+    border: none;
+}
+
+nav input,
 nav h2,
 nav h3 {
     font-size: 1em;
