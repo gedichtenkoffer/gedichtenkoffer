@@ -14,4 +14,4 @@ die zijn lekker klein van stuk \
 Nee, hij moet de koe bij de horens vatten \
 maar niemand vaart wel zonder geluk
 
-![koeien](IMG_20200912_194541__01.jpg)
+![koeien](koe.jpg)

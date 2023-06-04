@@ -45,4 +45,4 @@ moeder huilde radeloos  \
 Jantje kan zijn leed niet dragen \
 liever zag hij vader boos
 
-![jan](Kleine_Jan.jpg)
+![jan](Kleine Jan.jpg)
