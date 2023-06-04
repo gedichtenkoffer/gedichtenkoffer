@@ -1,13 +1,24 @@
 const mainListOriginal = document.querySelector('nav ul').cloneNode(true);
 
-document.querySelector('nav form').addEventListener('submit', function(e) {
-    e.preventDefault(); // prevent the form from being submitted normally
+const debounce = (func, wait) => {
+    let timeout;
 
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+};
+
+document.querySelector('nav input').addEventListener('input', debounce((e) => {
     const mainList = document.querySelector('nav ul');
-    const searchTerm = document.querySelector('nav form input').value;
-    
+    const searchTerm = document.querySelector('nav input').value;
+
     if (searchTerm === '') {
-        // if search term is empty, restore original list
         const newMainList = mainListOriginal.cloneNode(true);
         mainList.parentNode.replaceChild(newMainList, mainList);
     } else {
@@ -33,7 +44,7 @@ document.querySelector('nav form').addEventListener('submit', function(e) {
             console.log('Search term not found in any list item.');
         }
     }
-});
+}, 300));
 
 const searchList = (searchTerm) => {
     const mainList = document.querySelector('nav ul');
