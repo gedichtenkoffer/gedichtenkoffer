@@ -1,3 +1,10 @@
+window.addEventListener('resize', function () {
+    const menu = document.querySelector('nav ul');
+    if (window.innerWidth >= 800) {
+        menu.style.display = 'block';
+    }
+});
+
 const setupEventListeners = () => {
     document.querySelectorAll('.toggle-submenu').forEach((a) => {
         a.addEventListener('click', (e) => {
