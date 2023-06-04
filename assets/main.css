@@ -257,5 +257,12 @@ button:focus {
 @media (prefers-color-scheme: dark) {
     button {
         color: var(--text);
+
+    }
+
+    button:hover,
+    button:active,
+    button:focus {
+        border: 1px solid var(--light-primary);
     }
 }
