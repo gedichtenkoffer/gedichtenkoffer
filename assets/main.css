@@ -54,6 +54,7 @@ main {
         margin: auto;
     }
 
+    nav input,
     nav ul {
         display: none;
     }
@@ -91,6 +92,7 @@ main {
         max-width: none;
     }
 
+    nav input,
     nav ul {
         display: block;
     }
@@ -164,7 +166,6 @@ nav input {
     color: var(--text);
     text-decoration: none;
     cursor: text;
-    display: block;
     margin: 0.5em;
     background: transparent;
     border: none;
