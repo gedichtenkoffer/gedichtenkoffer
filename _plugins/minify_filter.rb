@@ -1,7 +1,7 @@
-require 'uglifier'
 require 'cssminify2'
 require 'htmlcompressor'
 require 'json'
+require 'terser'
 
 module Jekyll
   module MinifyFilter
@@ -10,11 +10,10 @@ module Jekyll
 
       case type
       when 'js'
-        if input.include?('{{') || input.include?('}}') || input.include?('serviceWorker')
+        if input.include?('{{') || input.include?('}}')
           input
         else
-          uglifier = Uglifier.new(harmony: true)
-          uglifier.compile(input)
+          Terser.new.compile(input)
         end
       when 'json'
         JSON.generate(JSON.parse(input))
