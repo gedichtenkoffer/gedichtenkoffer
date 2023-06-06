@@ -20,11 +20,18 @@
 * {
     font-family: 'Cantarell', 'Arial', 'Helvetica', sans-serif;
     line-height: 1.5;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     border-radius: 0.5em;
 }
 
 html,
+body {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+html {
+    background-color: var(--primary);
+}
+
 body {
     background-color: var(--background);
     color: var(--text);

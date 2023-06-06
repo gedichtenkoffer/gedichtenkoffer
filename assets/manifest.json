@@ -5,7 +5,7 @@
     "start_url": "/",
     "display": "standalone",
     "lang": "nl",
-    "background_color": "#EDEDED",
+    "background_color": "#1976D2",
     "theme_color": "#1976D2",
     "icons": [
         {
