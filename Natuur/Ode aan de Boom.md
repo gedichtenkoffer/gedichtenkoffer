@@ -14,7 +14,7 @@ gaat met de seizoenen mee\
 kleurrijk, geurend, boeiend\
 kaal, groen of in een bloemenzee
 
-Je ademt zuurstof\
+Je neemt kooldioxide op\
 geeft zuurstof aan anderen\
 je leeft en geeft nieuw leven\
 heel gewoon, niets aan veranderen
