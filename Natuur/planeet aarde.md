@@ -17,7 +17,7 @@ en komt terecht in ons eten
 Troep hoort in de prullenbak\
 laat afval niet gaan zwerven\
 neem het mee in een vuilniszak\
-zodat het ons leefplezier niet zal bederven
+laat het ons leefplezier niet bederven
 
 Er is nog een hoop 'afval raapwerk'\
 Plastic, verloren spullen her en der\
