@@ -1,4 +1,6 @@
 
+# Over Mij
+
 'Kleine Jan die zag een doosje\
 thuis bij moeder op de kast\
 en hij greep toen na een poosje\
@@ -20,3 +22,10 @@ De banner symboliseert het leven\
 over alles wat we daar in beleven\
 Geboorte, het schrijven, de liefde, de rouw\
 snuffel lekker door de teksten dan zie je het gauw
+
+# Contact
+
+Wil je contact of heb je een vraag?\
+Stuur gerust een bericht, ik beantwoord het graag!
+
+[info@gedichtenkoffer.nl](mailto:info@gedichtenkoffer.nl)
