@@ -1,8 +1,8 @@
 ---
-map: Vrijheid en vrij zijn
+map: Vrijheid
 ---
 
-Vrijgestreden vrijheid
+## Vrijgestreden vrijheid
 
 Het leger roept op, Peter gaat\
 met trots en angst kijkt moeder toe\
