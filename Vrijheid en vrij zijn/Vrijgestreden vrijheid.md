@@ -1,3 +1,7 @@
+---
+map: Vrijheid en vrij zijn
+---
+
 Vrijgestreden vrijheid
 
 Het leger roept op, Peter gaat\
