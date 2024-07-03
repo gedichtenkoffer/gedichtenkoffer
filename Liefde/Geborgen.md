@@ -1,5 +1,8 @@
- 
-Mams
+---
+map: Liefde
+---
+
+## Geborgen
 
 Dank dat je er voor mij bent\
 dat je altijd voor mij klaarstaat\

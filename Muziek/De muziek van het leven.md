@@ -1,4 +1,8 @@
- De muziek van het leven
+---
+map: Muziek
+---
+
+## De muziek van het leven
 
 Het kabbelt en het stroomt\
 het brengt je in vervoering\

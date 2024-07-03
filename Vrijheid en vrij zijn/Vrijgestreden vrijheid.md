@@ -1,4 +1,8 @@
-Vrijgestreden vrijheid
+---
+map: Vrijheid
+---
+
+## Vrijgestreden vrijheid
 
 Het leger roept op, Peter gaat\
 met trots en angst kijkt moeder toe\
