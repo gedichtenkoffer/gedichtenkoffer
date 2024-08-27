@@ -15,7 +15,7 @@ alsof je daar weer helemaal bent\
 terwijl je luistert in het heden
 
 Het zet je in beweging\
-langzaam, gracious of juist wild\
+langzaam, gracieus of juist wild\
 er worden noten stevig gekraakt\
 of  aan het einde reeds verstild
 
