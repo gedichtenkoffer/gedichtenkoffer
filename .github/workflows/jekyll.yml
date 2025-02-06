@@ -50,13 +50,11 @@ jobs:
         env:
           JEKYLL_ENV: production
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: "github-pages"
           path: _site
-          overwrite: 'true'
-          include-hidden-files: 'true'
 
   deploy:
     environment:
