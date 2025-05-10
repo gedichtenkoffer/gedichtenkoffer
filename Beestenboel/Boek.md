@@ -23,7 +23,7 @@ En na zo'n heerlijk uitje strand\
 valt ze thuis al snel in dromenland
 
 Uit: Een hond houd je gezond maar hoe houd je de hond gezond?\
-Te bestellen via [info@gedichtenkoffer.nl](mailto:info@gedichtenkoffer.nl). ISBN 9789090397467
+Te bestellen via [info@gedichtenkoffer.nl](mailto:info@gedichtenkoffer.nl) ISBN 9789090397467
 
 ![boek](boek.jpg)
 
