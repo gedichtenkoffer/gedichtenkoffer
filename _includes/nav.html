@@ -31,5 +31,5 @@
     {%- endfor -%}
   </ul>
 </nav>
-<script type="text/javascript" src="{{ '/assets/menu.js' | relative_url }}?v={{ site.git_hash }}"
+<script src="{{ '/assets/menu.js' | relative_url }}?v={{ site.git_hash }}"
   integrity="{{ '/assets/menu.js' | source_path | read | minify: 'js' | sri_hash }}"></script>
