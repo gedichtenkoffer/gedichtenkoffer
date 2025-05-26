@@ -43,6 +43,10 @@ main {
     background-color: var(--secondary);
 }
 
+h1 {
+    font-size: 2em;
+}
+
 @media screen and (max-width: 800px) {
     img {
         max-width: 90%;
