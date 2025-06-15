@@ -1,8 +1,6 @@
 +++
 +++
 
-## Terug naar de basis
-
 Ik ren en vlieg mezelf voorbij \
 heb zoveel ballen omhoog te houden \
 er is nauwelijks tijd voor mij\

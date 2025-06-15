@@ -1,8 +1,6 @@
 +++
 +++
 
-## Zeilers liefde
-
 Waar de wind ons brengt
 
 Wild slaat ze om haar heen\

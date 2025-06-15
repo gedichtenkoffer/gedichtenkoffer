@@ -1,8 +1,6 @@
 +++
 +++
 
-## Uit de Toon
-
 Misschien had je het al in de gaten \
 maar ik kan het echt niet laten
 

@@ -1,8 +1,6 @@
 +++
 +++
 
-## Als de aandacht is verstomd
-
 Als de aandacht is verstomd \
 ben ik jou nog lang niet vergeten \
 Als de aandacht is verstomd \

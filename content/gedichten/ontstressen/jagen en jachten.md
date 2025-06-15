@@ -1,8 +1,6 @@
 +++
 +++
 
-## Op jacht
-
 We jagen maar, we jachten maar\
 nauwelijks tijd voor een spontaan praatje\
 bijpraten moet per afspraak gaan\

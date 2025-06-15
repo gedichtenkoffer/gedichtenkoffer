@@ -1,8 +1,6 @@
 +++
 +++
 
-## Een hond houd je gezond
-
 Hondje met bal in zijn mond \
 rent vrolijk in het rond \
 en legt de bal terstond \

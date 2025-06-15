@@ -1,8 +1,6 @@
 +++
 +++
 
-## Ter nagedachtenis
-
 Ontelbare herinneringen verschenen \
 met een glimlach en een traan \
 het lichaam verdwenen \

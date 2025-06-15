@@ -1,8 +1,6 @@
 +++
 +++
 
-## Planeet aarde
-
 Ons ruimteschip planeet aarde,\
 zo mooi om te zijn en te zien\
 houd haar mooi en in haar waarde\

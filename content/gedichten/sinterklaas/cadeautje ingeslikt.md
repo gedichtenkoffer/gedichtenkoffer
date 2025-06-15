@@ -1,8 +1,6 @@
 +++
 +++
 
-## Cadeautje ingeslikt
-
 Het is alweer de laatste maand van het jaar \
 alle cadeautjes zijn ingepakt en liggen klaar \
 gedichten geschreven, surprises gemaakt  \

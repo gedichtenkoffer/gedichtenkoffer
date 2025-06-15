@@ -1,8 +1,6 @@
 +++
 +++
 
-## Afscheid in Corona tijd
-
 Wat zou ik graag een arm om je heen slaan \
 maar het kan niet, het mag niet  \
 ik blijf anderhalve meter bij jou vandaan

@@ -1,8 +1,6 @@
 +++
 +++
 
-## Afscheid
-
 Stil staat de tijd \
 het is een feit \
 ik ben je kwijt \

@@ -1,8 +1,6 @@
 +++
 +++
 
-## Vrijgestreden vrijheid
-
 Het leger roept op, Peter gaat\
 met trots en angst kijkt moeder toe\
 hoe hij gepakt en bezakt het thuisfront verlaat\

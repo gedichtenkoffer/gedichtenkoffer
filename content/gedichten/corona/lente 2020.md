@@ -1,8 +1,6 @@
 +++
 +++
 
-## Lente 2020
-
 De lente komt langzaam op gang \
 knopjes in bomen, vogeltjes fluiten \
 toch is de sfeer anders, mensen zijn bang \

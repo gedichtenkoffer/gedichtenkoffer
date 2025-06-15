@@ -1,8 +1,6 @@
 +++
 +++
 
-## Vrijheid
-
 Leven met elkaars verschillen \
 als we dat allemaal accepteren en willen \
 dan zouden we in vrede leven met en naast elkaar \

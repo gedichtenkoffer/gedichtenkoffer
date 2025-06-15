@@ -1,8 +1,6 @@
 +++
 +++
 
-## Uit het veld geslagen
-
 Iedereen heeft wel eens zo'n moment...\
 dat je uit het veld geslagen bent\
 Even uithuilen, bijkomen en weer doorgaan\

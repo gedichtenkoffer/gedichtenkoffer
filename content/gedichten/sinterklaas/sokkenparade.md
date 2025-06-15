@@ -1,8 +1,6 @@
 +++
 +++
 
-## Sokkenparade
-
 Ze houden je lekker warm, zijn niet overbodig \
 je hebt er altijd twee van nodig \
 de één kan niet zonder de ander, de ander niet zonder de één \

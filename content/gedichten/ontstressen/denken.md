@@ -1,8 +1,6 @@
 +++
 +++
 
-## Denken
-
 Ik denk maar en ik denk maar \
 ik hoor mijn hersens kraken \
 ik dacht zo bij mezelf \

@@ -1,8 +1,6 @@
 +++
 +++
 
-## “De wereld draait door”
-
 De grond verdwijnt onder mijn voeten vandaan \
 wat is boven, wat is onder? \
 Ik voel mijn lichaam onderuit gaan \

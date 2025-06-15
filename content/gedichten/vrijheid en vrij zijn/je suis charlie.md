@@ -1,8 +1,6 @@
 +++
 +++
 
-## Je suis Charlie
-
 Je suis Charlie,  \
 je suis Bruxelle \
 we zien het liever nie \

@@ -1,8 +1,6 @@
 +++
 +++
 
-## Menopauze
-
 Als de oestrogenen het lijf gaan verlaten \
 nemen de lichamelijke ongemakken toe \
 willen wij vrouwen daar wel over praten \

@@ -1,8 +1,6 @@
 +++
 +++
 
-## Treurwilg
-
 Treurwilg wat laat je jouw takken hangen\
 tot aan het water reiken jouw blaadjes\
 alsof je daar het water wilt vangen\

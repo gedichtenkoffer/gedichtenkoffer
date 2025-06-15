@@ -1,8 +1,6 @@
 +++
 +++
 
-## Imperfectie
-
 Niemand is perfect \
 soms zijn we een beetje defect \
 een ieder begaat zo op zijn tijd \

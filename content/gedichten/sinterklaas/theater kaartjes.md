@@ -1,8 +1,6 @@
 +++
 +++
 
-## Theater kaartjes
-
 De jonge generatie zit graag achter de pc \
 de muis is hun allerbeste vriend \
 Vastgeplakt op een stoel krijg je hen nauwelijks nog mee \

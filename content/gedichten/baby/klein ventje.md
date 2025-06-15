@@ -1,8 +1,6 @@
 +++
 +++
 
-## Klein ventje
-
 Het koppie van zo’n kleintje is iets wat nooit verveelt \
 zijn pappa is zijn held en grote voorbeeld \
 Alles wat pappa doet houdt hij in de gaten \

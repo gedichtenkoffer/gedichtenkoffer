@@ -3,7 +3,6 @@ layout: doos
 author: null
 ---
 
-## De balade van Aris Hop
 Aanhoort het noodlot fel en wreed \
 van een kind dat op zijn nagels beet \
 een kind dat met zijn eigen tanden \

@@ -1,8 +1,6 @@
 +++
 +++
 
-## Verdwaald
-
 Ik zie door de bomen het bos niet meer \
 het lijkt hier wel een oerwoud \
 Ik verdwaal steeds keer op keer \

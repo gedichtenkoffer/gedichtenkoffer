@@ -1,8 +1,6 @@
 +++
 +++
 
-## Vliegensvlug
-
 Zo vrij als een vogel in de lucht \
 vliegen we over grenzen heen in een zucht  \
 Anthony Fokker is de eerste Hollandse man \

@@ -1,8 +1,6 @@
 +++
 +++
 
-## Lichtjes van geluk
-
 Vrolijke lampjes in de donkere avond\
 lichtjes dansend van plezier\
 wie ooit deze lichtjes uit vond\

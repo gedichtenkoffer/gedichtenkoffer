@@ -1,8 +1,6 @@
 +++
 +++
 
-## Wat ALS
-
 Wat ALS ik kon toveren dan toverde ik jou gezond \
 je loopt, fietst en danst weer vrolijk in het rond
 

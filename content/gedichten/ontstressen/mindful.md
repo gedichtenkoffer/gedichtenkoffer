@@ -1,8 +1,6 @@
 +++
 +++
 
-## Mindful
-
 We jagen en we jachten maar \
 geen tijd voor een simpel praatje \
 We jagen en we jachten maar \

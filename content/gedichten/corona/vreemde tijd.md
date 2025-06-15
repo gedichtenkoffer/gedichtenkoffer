@@ -1,8 +1,6 @@
 +++
 +++
 
-## Vreemde tijd
-
 Vreemde tijd \
 vrijheid kwijt
 

@@ -1,8 +1,6 @@
 +++
 +++
 
-## Herfst
-
 Het regent blaadjes, rode, bruine, gele \
 het regent blaadjes, het zijn er vele \
 het regent blaadjes, ze dansen in de wind \
@@ -19,6 +17,5 @@ Herfst, herfst, wat ben je mooi \
 en tegelijkertijd zo triest \
 je verliest jouw wonderschone verentooi \
 kleurrijk en duister als een kunstartiest
-
 
 ![Herfst](Herfst.jpg)

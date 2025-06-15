@@ -1,8 +1,6 @@
 +++
 +++
 
-## Goeie ouwe tijd
-
 Waar blijft de tijd, die goeie ouwe tijd\
 het gaat zo verschrikkelijk snel\
 alsof het door m\'n vingers glijdt,\

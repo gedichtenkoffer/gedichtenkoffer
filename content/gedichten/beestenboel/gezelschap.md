@@ -1,8 +1,6 @@
 +++
 +++
 
-## Gezelschap
-
 Je kwam op mijn pad \
 verrijkt mijn leven \
 Je kwam op mijn pad \

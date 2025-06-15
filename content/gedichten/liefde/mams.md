@@ -1,8 +1,6 @@
 +++
 +++
 
-## Mams
-
 Ze kent me door en door \
 heeft genoeg aan een half woord \
 brengt mij steeds weer op het goede spoor \

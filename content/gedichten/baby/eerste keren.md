@@ -1,8 +1,6 @@
 +++
 +++
 
-## Eerste keren
-
 Als baby moet je alles nog leren \
 jouw wereldje is nog zo klein \
 Voor zoveel dingen zijn er eerste keren \

@@ -3,7 +3,6 @@ layout: doos
 author: null
 ---
 
-## Verf en poeder
 "Vader," vroeg er laatst een jongen \
 die eens mee de trein in mocht  \
 "Heeft die juffrouw nieuwe lippen \

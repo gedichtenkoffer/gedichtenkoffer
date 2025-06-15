@@ -1,8 +1,6 @@
 +++
 +++
 
-## SlagHaren
-
 Er hangt een gordijntje voor mijn ogen \
 hoogste tijd om naar de kapper te gaan \
 ach, had dat maar weer gemogen \

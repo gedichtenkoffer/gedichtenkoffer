@@ -1,8 +1,6 @@
 +++
 +++
 
-## Moederliefde
-
 Onvoorwaardelijke moederliefde \
 ik heb het mogen ontvangen \
 onvoorwaardelijke moederliefde \

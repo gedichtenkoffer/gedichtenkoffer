@@ -1,8 +1,6 @@
 +++
 +++
 
-## Dak
-
 Het dak is er af \
 ik heb wat te repareren \
 bedenk ik mij zo bij het graf \

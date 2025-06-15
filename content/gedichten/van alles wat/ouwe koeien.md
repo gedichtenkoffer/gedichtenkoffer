@@ -1,8 +1,6 @@
 +++
 +++
 
-## Ouwe koeien
-
 Ouwe koeien uit de sloot halen, \
 tsjonge, wat een gedoe \
 Dat geduw en getrek \

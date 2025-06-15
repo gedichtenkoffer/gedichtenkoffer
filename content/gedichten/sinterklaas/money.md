@@ -1,8 +1,6 @@
 +++
 +++
 
-## Money
-
 Het rinkelt en het blinkt \
 soms zegt men dat het stinkt \
 het gaat door ieders hand \

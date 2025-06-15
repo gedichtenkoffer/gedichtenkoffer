@@ -1,8 +1,6 @@
 +++
 +++
 
-## Theater
-
 Dit is geen cadeautje om mee te spelen \
 maar er wordt voor jou gespeeld \
 Je kijkt er geamuseerd naar en bent met velen \

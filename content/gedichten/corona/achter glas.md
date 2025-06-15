@@ -1,8 +1,6 @@
 +++
 +++
 
-## Achter glas
-
 Een hand op het glas en een luchtzoen \
 was alles wat haar kinderen nog konden doen
 

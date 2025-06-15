@@ -1,8 +1,6 @@
 +++
 +++
 
-## Gevangen in je eigen hoofd
-
 Je zat gevangen in je eigen hoofd \
 konden we er maar bij \
 Gevangen in je eigen hoofd \

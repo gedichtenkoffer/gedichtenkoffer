@@ -1,8 +1,6 @@
 +++
 +++
 
-## Zee hond
-
 Enthousiast rent ze over het strand\
 volgt de golven heen en weer\
 graaft kuiltjes in het natte zand\

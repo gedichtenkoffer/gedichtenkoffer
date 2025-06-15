@@ -1,8 +1,6 @@
 +++
 +++
 
-## Maanden
-
 **Januari** \
 Schaatsen, sneeuw, maar ja, dat is er vaak net nie
 

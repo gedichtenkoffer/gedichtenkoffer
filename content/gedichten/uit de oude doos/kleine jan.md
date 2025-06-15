@@ -3,7 +3,6 @@ layout: doos
 author: OTOS Combinatie
 ---
 
-## Kleine Jan
 Kleine Jan die zag een doosje \
 thuis bij moeder op de kast  \
 en hij greep toen na een poosje  \

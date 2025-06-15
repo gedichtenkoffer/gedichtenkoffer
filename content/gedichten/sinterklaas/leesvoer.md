@@ -1,8 +1,6 @@
 +++
 +++
 
-## Leesvoer
-
 Een cadeautje groot of klein,  \
 op de verjaardag van de Sint \
 blijft je verrassen en is fijn \

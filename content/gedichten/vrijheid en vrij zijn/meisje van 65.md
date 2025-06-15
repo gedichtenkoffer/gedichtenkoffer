@@ -1,8 +1,6 @@
 +++
 +++
 
-## Meisje van 65
-
 Het meisje van 65
 doet veldbloemetjes in d'r haar\
 Dat meisje van 65\

@@ -1,8 +1,6 @@
 +++
 +++
 
-## Binky aan het strand
-
 Enthousiast rent ze over het strand\
 volgt de golven heen en weer\
 graaft kuiltjes in het natte zand\
@@ -27,8 +25,6 @@ Te bestellen via [info@gedichtenkoffer.nl](mailto:info@gedichtenkoffer.nl) ISBN 
 ![boek](boek.jpg)
 
 ![boek achterkant](boek_achterkant.jpg)
-
-## Levende deurbel
 
 TRRING TRRING gaat de deurbel\
 WOEF WOEF WOEF WOEF klinkt het weer\

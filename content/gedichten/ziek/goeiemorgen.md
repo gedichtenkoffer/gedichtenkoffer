@@ -1,8 +1,6 @@
 +++
 +++
 
-## 'Goeiemorgen'
-
 Ik stond vanmorgen brak op \
 dat was een slecht begin \
 had ik dat niet gedaan \

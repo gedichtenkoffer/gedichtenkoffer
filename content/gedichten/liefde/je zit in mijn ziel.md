@@ -1,8 +1,6 @@
 +++
 +++
 
-## Je zit in mijn ziel
-
 De liefde voor jou is zo groot \
 dat gaat ver voorbij de dood \
 jouw bloed stroomt door mijn aderen \

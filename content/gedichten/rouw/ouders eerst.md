@@ -1,8 +1,6 @@
 +++
 +++
 
-## Ouders eerst
-
 Ouders eerst, zo hoort het te gaan \
 toch, wanneer het zover is, grijpt het ons enorm aan \
 Helaas, we zijn ze kwijt \

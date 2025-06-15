@@ -1,8 +1,6 @@
 +++
 +++
 
-## Na Corona
-
 Na Corona ga ik weer reizen naar allerlei landen \
 duik ik graag het openbaar vervoer in \
 schud ik met aandacht vele handen \

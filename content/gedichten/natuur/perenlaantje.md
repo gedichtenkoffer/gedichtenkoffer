@@ -1,8 +1,6 @@
 +++
 +++
 
-## Perenlaantje
-
 Het Perenlaantje was in de bloei van haar leven \
 door heel veel fris groen flora omgeven \
 haar schoonheid hield zich schuil achter bomen \

@@ -1,8 +1,6 @@
 +++
 +++
 
-## Hoe grijzer, hoe wijzer
-
 Vijftig tinten grijze haren \
 en de rimpels er nog bij \
 gossie wat vliegen toch die jaren \

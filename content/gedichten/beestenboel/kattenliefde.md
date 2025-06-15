@@ -1,8 +1,6 @@
 +++
 +++
 
-## Kattenliefde
-
 Waarom houd ik zo van katten?\
 ze zijn kieskeurig en eigenwijs\
 maar het zijn ook lieve schatten,\

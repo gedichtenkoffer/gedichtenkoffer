@@ -1,8 +1,6 @@
 +++
 +++
 
-## Keelontsteking
-
 Heb het mes op mijn keel \
 het lijkt wel een stuk schuurpapier \
 ben er stil van, zeg niet veel \

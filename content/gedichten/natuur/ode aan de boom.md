@@ -1,8 +1,6 @@
 +++
 +++
 
-## Ode aan de boom
-
 Statig sta je daar\
 stevig geworteld in de grond\
 zoveel gezien en meegemaakt\

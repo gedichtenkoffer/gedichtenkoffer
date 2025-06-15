@@ -1,8 +1,6 @@
 +++
 +++
 
-## Liefde
-
 Liefde maakt het leven bijzonder \
 liefde heeft het leven lief \
 liefde, niemand kan er zonder \

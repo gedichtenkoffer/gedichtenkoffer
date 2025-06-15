@@ -1,8 +1,6 @@
 +++
 +++
 
-## Traditie
-
 Traditie getrouw vieren we Sinterklaas \
 met cadeautjes, surprises, gedichten, speculaas \
 Demonstraties, storm, wind of regen \

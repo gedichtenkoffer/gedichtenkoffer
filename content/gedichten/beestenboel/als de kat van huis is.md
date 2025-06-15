@@ -1,8 +1,6 @@
 +++
 +++
 
-## Als de kat van huis is
-
 Als de kat van huis is \
 gaat hij op ontdekkingstocht \
 eet onderweg muis of vis \

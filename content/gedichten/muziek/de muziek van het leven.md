@@ -1,8 +1,6 @@
 +++
 +++
 
-## De muziek van het leven
-
 Het kabbelt en het stroomt\
 het brengt je in vervoering\
 menigeen krijgt kippenvel\

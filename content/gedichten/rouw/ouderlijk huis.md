@@ -1,8 +1,6 @@
 +++
 +++
 
-## Ouderlijk huis
-
 Ouderlijk huis \
 niet langer bewoond \
 als kind was ik er thuis \

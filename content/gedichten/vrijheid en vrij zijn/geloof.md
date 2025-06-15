@@ -1,8 +1,6 @@
 +++
 +++
 
-## Geloof
-
 Geloven dat je nooit alleen bent \
 geloven in een hogere macht \
 het geeft je in moeilijke omstandigheid \

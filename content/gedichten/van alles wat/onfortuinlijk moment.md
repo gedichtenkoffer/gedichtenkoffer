@@ -1,8 +1,6 @@
 +++
 +++
 
-## Onfortuinlijk moment
-
 Er zijn zo van die dagen\
 die had je het allerliefste overgeslagen\
 een onfortuinlijk moment van maar een paar seconde\

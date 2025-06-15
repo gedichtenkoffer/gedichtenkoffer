@@ -1,8 +1,6 @@
 +++
 +++
 
-## Vrij als een vogel
-
 Als een vogel zo vrij in de lucht \
 de vleugels wijd open geslagen \
 vliegend met een diepe zucht \

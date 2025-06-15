@@ -1,8 +1,6 @@
 +++
 +++
 
-## Geborgen
-
 Dank dat je er voor mij bent\
 dat je altijd voor mij klaarstaat\
 dat je mij met liefde verwent\

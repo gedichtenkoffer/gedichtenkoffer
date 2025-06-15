@@ -2,7 +2,6 @@
 layout: doos
 ---
 
-## Opoe
 Volgens opoe's laatste wensen \
 op het sterfbed vastgesteld  \
 werd ze niet begraven \

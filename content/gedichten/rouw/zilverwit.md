@@ -1,8 +1,6 @@
 +++
 +++
 
-## Zilverwit
-
 Op een mooie zomerse dag \
 kon ik niet geloven wat ik zag \
 er fietste een oudere dame met zilverwit haar \

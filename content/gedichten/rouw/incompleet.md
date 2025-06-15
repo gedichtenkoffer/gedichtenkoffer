@@ -1,8 +1,6 @@
 +++
 +++
 
-## Incompleet
-
 Deze dagen met Kerst voelen incompleet \
 iemand in mijn hart die ik nooit vergeet \
 in mijn gedachten is ze er altijd bij \
