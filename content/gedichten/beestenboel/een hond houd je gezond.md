@@ -1,5 +1,4 @@
 ---
-map: Beestenboel
 ---
 
 ## Een hond houd je gezond

@@ -1,5 +1,4 @@
 ---
-map: Ziek
 ---
 
 ## Gevangen in je eigen hoofd

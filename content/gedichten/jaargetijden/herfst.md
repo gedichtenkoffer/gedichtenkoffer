@@ -1,5 +1,4 @@
 ---
-map: Jaargetijden
 ---
 
 ## Herfst

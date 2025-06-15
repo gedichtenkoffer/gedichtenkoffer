@@ -1,5 +1,4 @@
 ---
-map: Natuur
 ---
 
 ## Ode aan de boom

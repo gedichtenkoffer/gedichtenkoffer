@@ -1,5 +1,4 @@
 ---
-map: Sinterklaas
 ---
 
 ## Cadeautje ingeslikt

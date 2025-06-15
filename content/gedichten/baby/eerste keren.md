@@ -1,5 +1,4 @@
 ---
-map: Baby
 ---
 
 ## Eerste keren

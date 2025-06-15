@@ -1,5 +1,4 @@
 ---
-map: Van alles wat
 ---
 
 ## Uit de Toon

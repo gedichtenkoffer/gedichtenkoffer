@@ -1,5 +1,4 @@
 ---
-map: null
 ---
 
 ## Uit het veld geslagen

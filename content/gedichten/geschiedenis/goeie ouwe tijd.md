@@ -1,5 +1,4 @@
 ---
-map: Geschiedenis
 ---
 
 ## Goeie ouwe tijd

@@ -1,5 +1,4 @@
 ---
-map: Ontstressen
 ---
 
 ## Waar blijft de tijd...

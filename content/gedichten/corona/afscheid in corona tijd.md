@@ -1,5 +1,4 @@
 ---
-map: Corona
 ---
 
 ## Afscheid in Corona tijd

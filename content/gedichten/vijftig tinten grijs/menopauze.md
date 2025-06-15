@@ -1,5 +1,4 @@
 ---
-map: Vijftig tinten grijs
 ---
 
 ## Menopauze

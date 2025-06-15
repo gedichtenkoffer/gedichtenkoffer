@@ -1,5 +1,4 @@
 ---
-map: Potje onzin
 ---
 
 ## Dubbelzinnige bakker

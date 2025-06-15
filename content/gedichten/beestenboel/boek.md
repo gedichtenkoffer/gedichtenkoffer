@@ -1,5 +1,4 @@
 ---
-map: Beestenboel
 ---
 
 ## Binky aan het strand

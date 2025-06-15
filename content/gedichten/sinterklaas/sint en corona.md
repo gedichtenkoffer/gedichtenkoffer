@@ -1,5 +1,4 @@
 ---
-map: Sinterklaas
 ---
 
 ## Sint en Corona

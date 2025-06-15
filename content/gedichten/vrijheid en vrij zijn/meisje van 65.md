@@ -1,5 +1,4 @@
 ---
-map: null
 ---
 
 ## Meisje van 65

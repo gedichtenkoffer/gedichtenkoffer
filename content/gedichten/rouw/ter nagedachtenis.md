@@ -1,5 +1,4 @@
 ---
-map: Rouw
 ---
 
 ## Ter nagedachtenis

@@ -1,5 +1,4 @@
 ---
-map: Rouw
 ---
 
 ## Als de aandacht is verstomd

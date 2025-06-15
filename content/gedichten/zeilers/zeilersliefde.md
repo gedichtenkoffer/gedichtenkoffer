@@ -1,5 +1,4 @@
 ---
-map: Zeilers
 ---
 
 ## Zeilers liefde

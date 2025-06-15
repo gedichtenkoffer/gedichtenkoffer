@@ -1,5 +1,4 @@
 ---
-map: null
 ---
 
 ## Op jacht

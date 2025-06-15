@@ -1,5 +1,4 @@
 ---
-map: Van alles wat
 ---
 
 ## Onfortuinlijk moment

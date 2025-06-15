@@ -1,5 +1,4 @@
 ---
-map: Kerst
 ---
 
 ## Lichtjes van geluk

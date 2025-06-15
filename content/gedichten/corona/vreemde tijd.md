@@ -1,5 +1,4 @@
 ---
-map: Corona
 ---
 
 ## Vreemde tijd

@@ -1,5 +1,4 @@
 ---
-map: Liefde
 ---
 
 ## Je zit in mijn ziel

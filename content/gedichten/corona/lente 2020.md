@@ -1,5 +1,4 @@
 ---
-map: Corona
 ---
 
 ## Lente 2020

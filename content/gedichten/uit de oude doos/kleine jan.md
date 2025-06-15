@@ -1,5 +1,4 @@
 ---
-map: Uit de oude doos
 layout: doos
 author: OTOS Combinatie
 ---

@@ -1,5 +1,4 @@
 ---
-map: Ziek
 ---
 
 ## “De wereld draait door”

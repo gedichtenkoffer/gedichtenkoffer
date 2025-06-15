@@ -1,5 +1,4 @@
 ---
-map: Kerst
 ---
 
 ## Licht in duisternis

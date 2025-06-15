@@ -1,5 +1,4 @@
 ---
-map: Ontstressen
 ---
 
 ## Denken

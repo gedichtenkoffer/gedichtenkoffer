@@ -1,5 +1,4 @@
 ---
-map: Liefde
 ---
 
 ## Vrij als een vogel

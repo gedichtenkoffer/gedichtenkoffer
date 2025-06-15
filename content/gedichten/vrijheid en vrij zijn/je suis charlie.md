@@ -1,5 +1,4 @@
 ---
-map: Vrijheid
 ---
 
 ## Je suis Charlie

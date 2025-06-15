@@ -1,5 +1,4 @@
 ---
-map: Natuur
 ---
 
 ## Planeet aarde

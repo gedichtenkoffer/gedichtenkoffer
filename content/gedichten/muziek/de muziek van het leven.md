@@ -1,5 +1,4 @@
 ---
-map: Muziek
 ---
 
 ## De muziek van het leven

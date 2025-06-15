@@ -1,5 +1,4 @@
 ---
-map: Vrijheid
 ---
 
 ## Vrijgestreden vrijheid

@@ -1,5 +1,4 @@
 ---
-map: Jaargetijden
 ---
 
 ## De eerste lente zonnestralen

@@ -1,5 +1,4 @@
 ---
-map: Liefde
 ---
 
 ## Terug naar de basis
