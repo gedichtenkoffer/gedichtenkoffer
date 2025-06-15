@@ -1,5 +1,7 @@
++++
++++
 
-# Over Mij
+## Over Mij
 
 'Kleine Jan die zag een doosje\
 thuis bij moeder op de kast\
@@ -23,7 +25,7 @@ over alles wat we daar in beleven\
 Geboorte, het schrijven, de liefde, de rouw\
 snuffel lekker door de teksten dan zie je het gauw
 
-# Contact
+## Contact
 
 Wil je contact of heb je een vraag?\
 Stuur gerust een bericht, ik beantwoord het graag!
